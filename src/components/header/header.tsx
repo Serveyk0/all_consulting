@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Footer: React.FC = ( ): JSX.Element=>  
+export const Header: React.FC = ( ): JSX.Element=>  
 {
 
     return (
