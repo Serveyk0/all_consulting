@@ -1,0 +1,66 @@
+.header {
+  height: 150px;
+  display: grid;
+  align-items: center;
+  grid-column-gap: 25px;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 1px #dcdcdc solid;
+}
+
+.header .header_logo {
+  width: 100%;
+}
+
+.header .header_contacts {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: repeat(4, min-content);
+  text-align: end;
+  font-family: Arial;
+  margin: 0 0 0 auto;
+}
+
+.header .header_contacts .header_contacts_phones {
+  font-size: 20px;
+  line-height: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  font-weight: bold;
+}
+
+.header .header_contacts .header_contacts_phones .header_contacts_phones_one {
+  text-decoration: none;
+  color: #333333;
+}
+
+.header .header_contacts .header_contacts_address,
+.header .header_contacts .header_contacts_days {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.header .header_contacts .search {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: end;
+  grid-column-gap: 20px;
+}
+
+.header .header_contacts .search .search_text,
+.header .header_contacts .search .search_button {
+  height: 22px;
+  padding: 0;
+}
+
+.header .header_contacts .search .search_button {
+  padding: 0;
+  background-color: #5094dc;
+  color: white;
+  border: none;
+}
