@@ -11,7 +11,7 @@ export const Header: React.FC = (  ): JSX.Element =>
         set_search_val ( event.target.value );
 
     return (
-        <div className="header"> 
+        <header className="header"> 
             <a href="/#">
                 <img alt="все консультации" src={ logo } className="header_logo" />
             </a>
@@ -27,6 +27,6 @@ export const Header: React.FC = (  ): JSX.Element =>
                     <button className="search_button" >{search}</button>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
