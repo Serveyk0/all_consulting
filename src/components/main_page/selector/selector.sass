@@ -1,0 +1,40 @@
+@import "../../../media/mixin/font_size.sass";
+
+.selector
+    display: grid
+    justify-content: center
+    align-items: center
+    grid-template-rows: 1fr 5fr
+    margin-top: 30px
+    .selector_change_items
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        justify-content: center
+        align-items: center
+        grid-column-gap: 5px
+        .item
+            color: #333333
+            border-radius: 10px 10px 0 0
+            background-color: #c7c7c7
+            padding: 10px 10px
+            text-transform: uppercase
+            font-weight: bold
+            @include fluidFontSize(8px, 18px, 480px, 1256px, 14px)
+            text-align: center
+            font-family: Tahoma
+            &:hover
+                color: #ffffff
+                background-color: #dc5858
+    .selector_description_items
+        .description
+            display: none
+            @include fluidFontSize(10px, 14px, 480px, 1256px, 12px)
+            
+
+.active_item
+    color: #ffffff !important
+    background-color: #dc5858 !important
+
+.active_description
+    display: block !important
+    text-align: justify
