@@ -4,8 +4,8 @@ export const Footer: React.FC = ( ): JSX.Element=>
 {
 
     return (
-        <div>
+        <footer className="footer">
             
-        </div>
+        </footer>
     )
 }
