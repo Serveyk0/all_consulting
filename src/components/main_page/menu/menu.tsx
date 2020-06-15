@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { descript } from "./constant";
+import React from 'react';
 
 import "./menu.sass";
 

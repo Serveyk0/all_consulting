@@ -5,7 +5,7 @@ import "./main_page.sass";
 import { Selector } from './selector/selector';
 import { Menu } from './menu/menu';
 
-export const Main_page: React.FC = (  ): JSX.Element =>  
+export const MainPage: React.FC = (  ): JSX.Element =>  
 {
     return (
         <div className="main_page">

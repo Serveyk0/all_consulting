@@ -8,7 +8,6 @@ export const Selector: React.FC = (  ): JSX.Element =>
 {
     const [select_index, set_select_index] = useState(0);
     const [select_item, set_select_item] = useState(selection_array[0]);
-    // const current_item = selection_array[0];
 
     const handle_change = ( index: number ) => 
     {
@@ -20,7 +19,7 @@ export const Selector: React.FC = (  ): JSX.Element =>
         <div className="selector">
             <div className="selector_change_items">
                 {selection_array.map((item: select_object, index: number) => { return ( 
-                    <span key={index} className={"item" + (select_index == index ? " active_item" : "")} onClick={ () => handle_change(index) }>{item.item}</span>
+                    <span key={index} className={"item" + (select_index === index ? " active_item" : "")} onClick={ () => handle_change(index) }>{item.item}</span>
                 )})}     
             </div>
             <div className="selector_description_items">

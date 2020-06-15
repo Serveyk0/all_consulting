@@ -22,36 +22,33 @@ export const Form = ( props: any ): JSX.Element =>
 
     const reset_form = ( ): void => 
     {
-        for ( let i: number = 0; i < fields_array.length; i++ )
+        for (let i : number = 0; i < fields_array.length; i ++ )
             fields_array[i][1]("");
     }
 
     const change_field = ( event: any, set_field: Function ) => 
-    {
-        set_field(field);
-    }
-
-    console.log(field_1);
+        set_field(event.target.value);
     const {description_form} = props;
+    console.log(field_1);
     return (
         <div className="wrapper_form">
             <form className="form">
                 {description_form.map((item: any, index: number) => { return ( 
                     <div key={index} className="form_field">
                         <span className="form_field_text">{item}</span>
-                        {Object.keys(description_form).length != index + 1 
+                        {Object.keys(description_form).length !== index + 1 
                         ?
-                            <input type="text" className="form_field_input" name={item} onChange={() => change_field(fields_array[index][1])} />
+                            <input type="text" value={fields_array[index][0]} className="form_field_input" name={item} onChange={(e) => change_field(e, fields_array[index][1])} />
                         :
                             <>
-                                <textarea className="form_field_textarea" name={item}></textarea>
+                                <textarea className="form_field_textarea" value={fields_array[index][0]} name={item} onChange={(e) => change_field(e, fields_array[index][1])} ></textarea>
                             </>
                         }
                     </div>
                 )})}
                 <div className="form_field_button">
-                    <button className="form_field_button_reset" onClick={() => reset_form()}>{reset}</button>
-                    <button className="form_field_button_send">{send}</button>
+                    <span className="form_field_button_reset" onClick={reset_form}>{reset}</span>
+                    <span className="form_field_button_send">{send}</span>
                 </div>
             </form>
             <div className="form_button">
