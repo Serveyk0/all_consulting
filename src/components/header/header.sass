@@ -23,11 +23,12 @@
             display: grid
             justify-content: center
             align-items: center
-            grid-template-columns: 1fr 1fr 
+            grid-template-columns: repeat(auto-fit, minmax(100px, auto))
             grid-column-gap: 10px
             font-weight: bold
             .header_contacts_phones_one
                 text-decoration: none
+                min-width: max-content
                 @include fluidFontSize(12px, 20px, 480px, 1256px, 18px)
                 color: #333333
         .header_contacts_address,

@@ -31,20 +31,20 @@ const consultation: select_object =
 
 export const selection_array: Array<select_object> = [about_company, request_call, consultation];
 
-export const form_request_call: form = 
-{
-    field_1: "Организация",
-    field_2: "Контактное лицо",
-    field_3: "Телефон",
-    field_4: "Удобное время",
-    field_5: "Тема звонка"
-}
+export const form_request_call: Array<string> = 
+[
+    "Организация",
+    "Контактное лицо",
+    "Телефон",
+    "Удобное время",
+    "Тема звонка"
+]
 
-export const form_consultation: form = 
-{
-    field_1: "Организация",
-    field_2: "Контактное лицо",
-    field_3: "Телефон",
-    field_4: "Электронная почта",
-    field_5: "Сообщение"
-}
+export const form_consultation: Array<string> = 
+[
+    "Организация",
+    "Контактное лицо",
+    "Телефон",
+    "Электронная почта",
+    "Сообщение"
+]

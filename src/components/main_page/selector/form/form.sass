@@ -1,0 +1,39 @@
+.wrapper_form
+    .form
+        display: grid
+        align-items: center
+        grid-row-gap: 5px
+        .form_field
+            display: grid
+            justify-content: start
+            align-items: center
+            grid-template-columns: 1fr 2fr
+            grid-column-gap: 20px
+            .form_field_text
+                font-size: 12px
+            .form_field_input,
+            .form_field_textarea
+                outline: none
+                padding: 5px 0 5px 10px
+                padding-left: 10px
+                margin: 0
+                width: 100% !important
+                border-width: 1px
+            .form_field_textarea
+                max-height: 150px
+    .form_field_button
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin-top: 20px
+        color: #dc5050
+        .form_field_button_reset,
+        .form_field_button_send
+            padding: 0
+            border: none
+            font: inherit
+            outline: none
+            color: inherit
+            background-color: transparent
+            cursor: pointer
+            &:hover
+                text-decoration: underline

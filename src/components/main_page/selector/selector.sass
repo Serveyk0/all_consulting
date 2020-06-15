@@ -2,14 +2,12 @@
 
 .selector
     display: grid
-    justify-content: center
-    align-items: center
-    grid-template-rows: 1fr 5fr
+    grid-template-rows: 1fr 6fr
     margin-top: 30px
+    grid-row-gap: 20px
     .selector_change_items
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        justify-content: center
         align-items: center
         grid-column-gap: 5px
         .item
@@ -19,12 +17,13 @@
             padding: 10px 10px
             text-transform: uppercase
             font-weight: bold
-            @include fluidFontSize(8px, 18px, 480px, 1256px, 14px)
+            @include fluidFontSize(6px, 14px, 480px, 1256px, 10px)
             text-align: center
             font-family: Tahoma
             &:hover
                 color: #ffffff
-                background-color: #dc5858
+                cursor: default
+                background-color: #ffbbbb
     .selector_description_items
         .description
             display: none
@@ -38,3 +37,4 @@
 .active_description
     display: block !important
     text-align: justify
+    
