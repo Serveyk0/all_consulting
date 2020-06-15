@@ -20,6 +20,18 @@ export const Form = ( props: any ): JSX.Element =>
         [field_5, set_field_5], 
     ]
 
+    const handleSubmit = async (e:any) => 
+    {
+        e.preventDefault();
+        const body = {
+            field_1, field_2, field_3, field_4, field_5
+        }
+        fetch('/api/sendMailCall', {
+            method: 'POST',
+            body: JSON.stringify(body),
+          })
+    }
+
     const reset_form = ( ): void => 
     {
         for (let i : number = 0; i < fields_array.length; i ++ )
@@ -29,7 +41,10 @@ export const Form = ( props: any ): JSX.Element =>
     const change_field = ( event: any, set_field: Function ) => 
         set_field(event.target.value);
     const {description_form} = props;
-    console.log(field_1);
+
+
+
+
     return (
         <div className="wrapper_form">
             <form className="form">
@@ -40,15 +55,13 @@ export const Form = ( props: any ): JSX.Element =>
                         ?
                             <input type="text" value={fields_array[index][0]} className="form_field_input" name={item} onChange={(e) => change_field(e, fields_array[index][1])} />
                         :
-                            <>
-                                <textarea className="form_field_textarea" value={fields_array[index][0]} name={item} onChange={(e) => change_field(e, fields_array[index][1])} ></textarea>
-                            </>
+                            <textarea className="form_field_textarea" value={fields_array[index][0]} name={item} onChange={(e) => change_field(e, fields_array[index][1])} ></textarea>
                         }
                     </div>
                 )})}
                 <div className="form_field_button">
                     <span className="form_field_button_reset" onClick={reset_form}>{reset}</span>
-                    <span className="form_field_button_send">{send}</span>
+                    <span className="form_field_button_send" onClick={handleSubmit}>{send}</span>
                 </div>
             </form>
             <div className="form_button">
