@@ -9,6 +9,7 @@ export interface form {
     field_3: string
     field_4: string
     field_5: string
+    name: string
 }
 
 const about_company: select_object = 
@@ -37,7 +38,8 @@ export const form_request_call: Array<string> =
     "Контактное лицо",
     "Телефон",
     "Удобное время",
-    "Тема звонка"
+    "Тема звонка",
+    "call"
 ]
 
 export const form_consultation: Array<string> = 
@@ -46,5 +48,6 @@ export const form_consultation: Array<string> =
     "Контактное лицо",
     "Телефон",
     "Электронная почта",
-    "Сообщение"
+    "Сообщение",
+    "consultation"
 ]

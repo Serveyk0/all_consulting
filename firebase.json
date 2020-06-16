@@ -17,18 +17,14 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/api/sendMailCall",
+        "source": "/sendMail",
         "function": "sendMailCall"
       }
     ]
   },
   "emulators": {
     "functions": {
-      "port": null
+      "port": 3000
     },
     "database": {
       "port": null
@@ -38,7 +34,7 @@
     },
     "ui": {
       "enabled": true,
-      "port": 5001
+      "port": 5002
     }
   }
 }
