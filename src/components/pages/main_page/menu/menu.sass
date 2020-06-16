@@ -1,0 +1,33 @@
+@import "../../../../media/mixin/font_size.sass";
+    
+.menu
+    font-family: Arial
+    .menu_title
+        @include fluidFontSize(10px, 14px, 480px, 1256px, 12px)
+        font-weight: bold
+        text-decoration: none
+        color: #333333
+        text-transform: uppercase
+        &:hover
+            color: #ff00009e
+    .menu_block
+        padding: 0
+        .menu_block_item
+            list-style-type: none
+            .menu_block_item_link
+                text-decoration: none
+                color: #333333
+                font-size: 14px
+                font-weight: normal
+                display: grid
+                grid-template-columns: 10px auto
+                grid-column-gap: 10px
+                align-items: center
+                &:hover
+                    color: #ff00009e
+                &:before
+                    content: "\2B24"
+                    font-size: 7px
+                    &:hover
+                        color: #ff00009e
+                

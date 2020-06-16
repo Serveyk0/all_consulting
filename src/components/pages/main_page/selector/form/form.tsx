@@ -31,7 +31,7 @@ export const Form = ( props: any ): JSX.Element =>
             field_5: field_5,
             name: description_form[description_form.length - 1]
         }
-        fetch('\sendMail', {
+        fetch('/sendMail', {
             method: 'POST',
             body: JSON.stringify(body),
           })

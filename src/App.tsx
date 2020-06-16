@@ -2,13 +2,15 @@ import React from 'react';
 import './App.css';
 import { Header } from "./components/header/header"
 import { Footer } from './components/footer/footer';
-import { MainPage } from './components/main_page/main_page';
+import { MainMenu } from './components/menu/main_menu';
 
-function App() {
+export const App = (props: any) => {
+  const { menu } = props;
   return (
     <div className="App">
       <Header />
-      <MainPage />
+      {menu === true ? <MainMenu /> : ""}
+      {props.children}
       <Footer />
     </div>
   );

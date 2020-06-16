@@ -1,7 +1,7 @@
-import first from "../../../media/main_page/slider/1.png";
-import second from "../../../media/main_page/slider/2.png";
-import third from "../../../media/main_page/slider/3.png";
-import fourth from "../../../media/main_page/slider/4.png";
+import first from "../../../../media/main_page/slider/1.png";
+import second from "../../../../media/main_page/slider/2.png";
+import third from "../../../../media/main_page/slider/3.png";
+import fourth from "../../../../media/main_page/slider/4.png";
 
 export interface slide
 {

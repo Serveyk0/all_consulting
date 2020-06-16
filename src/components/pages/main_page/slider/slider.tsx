@@ -13,7 +13,9 @@ export const MySlider: React.FC = (  ): JSX.Element =>
         arrowsBlock: false,
         autoplay: true,
         autoplaySpeed: 4000,
-        dots: true
+        dots: true,
+        swipe: false,
+        wheel: true
     };
     return (
         <div>

@@ -13,8 +13,8 @@ export const MainPage: React.FC = (  ): JSX.Element =>
             <div className="main_page_description">
                 <div className="main_page_description_selector">
                     <Selector />
-                    <Menu />
                 </div>
+                <Menu />
             </div>
         </div>
     )

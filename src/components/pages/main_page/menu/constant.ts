@@ -4,6 +4,7 @@ export const href_component =
 [
     {
         name: "Паспортно-визовые услуги",
+        name_href: "passport_and_visa_services",
         item_array: ["Деловые приглашения", "Коммерческие приглашения", "Рабочие приглашеня", "Переоформление рабочих виз"],
         item_href: 
         [
@@ -15,14 +16,15 @@ export const href_component =
     },
     {
         name: "Дополниетльные услуги",
+        name_href: "additional_services",
         item_array: ["Аутстаффинг", "Кадровые услуги", "Нотариальные переводы", "Медицинские услуги", "Бухалтерское и кадровое сопровождение"],
         item_href: 
         [
-            "Outstaffing", 
-            "Personnel Services", 
-            "Notary Translations", 
-            "Medical Services", 
-            "Accounting and Personnel Support"
+            "outstaffing", 
+            "personnel_services", 
+            "notary_translations", 
+            "medical_services", 
+            "accounting_and_personnel_support"
         ]
     }
 ]
