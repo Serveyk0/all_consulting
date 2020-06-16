@@ -41,7 +41,7 @@ export const Form = ( props: any ): JSX.Element =>
             .catch(err => {
                 console.log(500);
             })
-        
+        reset_form();
     }
 
     const reset_form = ( ): void => 
