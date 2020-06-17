@@ -4,9 +4,11 @@ import { MySlider } from "./slider/slider";
 import "./main_page.sass";
 import { Selector } from './selector/selector';
 import { Menu } from './menu/menu';
+import { show } from './../../show';
 
 export const MainPage: React.FC = (  ): JSX.Element =>  
 {
+    show();
     return (
         <div className="main_page">
             <MySlider />
