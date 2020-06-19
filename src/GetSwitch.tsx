@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { MainPage } from './components/pages/main_page/main_page';
 import { AdditionalServices } from './components/pages/additional_services/additional_services';
@@ -12,21 +12,13 @@ import { RenewalOfWorkVisas } from './components/pages/renewal_of_work_visas/ren
 import { WorkInvitations } from './components/pages/work_invitations/work_invitations';
 import { PersonnelServices } from './components/pages/personnel_services/personnel_services';
 import { AAPS } from './components/pages/accounting_and_personnel_support/aaps';
-import { Selector } from './components/pages/main_page/selector/selector';
 
-
-interface GetSwitchProps 
-{
-    selector: number
-}
-
-export class GetSwitch extends React.Component<GetSwitchProps> {
+export class GetSwitch extends React.Component {
     render () {
-    const { selector } = this.props;
-    console.log(this.props.selector);
+    const [ select_item, set_select_item ] = useState(0);
 	return(
 		<Switch>
-            <Route exact path='/'                                         render={() => { return( <MainPage selector_props={selector} />)}}/>
+            <Route exact path='/'                                         render={() => { return( <MainPage selector_props={select_item} />)}}/>
             <Route exact path='/additional_services'                      component={AdditionalServices} />
             <Route exact path='/business_invitations'                     component={BusinessInvitations} />
             <Route exact path='/commercial_invitations'                   component={CommercialInvitations} />
@@ -38,6 +30,7 @@ export class GetSwitch extends React.Component<GetSwitchProps> {
             <Route exact path='/work_invitations'                         component={WorkInvitations} />
             <Route exact path='/personnel_services'                       component={PersonnelServices} />
             <Route exact path='/accounting_and_personnel_support'         component={AAPS} />
-          </Switch>)
+        </Switch>
+        )
     }
 };

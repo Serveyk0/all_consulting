@@ -20,16 +20,16 @@ export const MainMenu: React.FC = ( ): JSX.Element =>
                                 Object.values(ul_item.item_array).map((li_item: string, li_index: number) => { console.log(li_index); return ( 
                                     <li key={li_index} className="main_menu_block_item">
                                         {!check_link ? <NavLink to={ul_item.item_href[li_index]} className="main_menu_block_item_link">{li_item}</NavLink>
-                                        :
-                                        
+                                        : 
                                         <Link to=
                                         {
                                             {
                                                 pathname: ul_item.item_href[li_index],
-                                                state: {selector: 1}
+                                                state:{currentPage: 1}
+                
                                             }
                                         } 
-                                            className="main_menu_block_item_link" >{li_item}</Link>}
+                                        className="main_menu_block_item_link" >{li_item}</Link>}
                                     </li>
                                 )})
                             }

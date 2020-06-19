@@ -10,7 +10,7 @@ ReactDOM.render(
     <React.StrictMode>
       <HashRouter>
         <App>
-          <GetSwitch selector={0} />
+          <GetSwitch currentPage={0} />
         </App>
       </HashRouter>
     </React.StrictMode>,
