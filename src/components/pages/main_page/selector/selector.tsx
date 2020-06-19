@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { selection_array, select_object } from "./constant";
+import { connect } from 'react-redux';
 
 import "./selector.sass";
 import { Form } from './form/form';
 
-export const Selector = ( props: any ) =>  
+const Selector = ( props: any ) =>  
 {
-    const { select } = props;
+    const { changeSelector } = props;
 
     const [select_index, set_select_index] = useState(0);
     const [select_item, set_select_item] = useState(selection_array[0]);
@@ -17,12 +18,11 @@ export const Selector = ( props: any ) =>
         set_select_item(selection_array[index]);
     }
 
-    if ( select !== select_index )
+    if ( select_index !== changeSelector.cs)
     {
-        set_select_index(select);
-        set_select_item(selection_array[select]);
+        set_select_index(changeSelector.cs);
+        set_select_item(selection_array[changeSelector.cs]);
     }
-
     return (
         <div className="selector">
             <div className="selector_change_items">
@@ -39,3 +39,12 @@ export const Selector = ( props: any ) =>
         </div>
     )
 }
+
+
+const mapStateToProps = (state: any) => {
+	return {
+        changeSelector: state.changeSelector,
+    }
+};
+
+export default connect(mapStateToProps)(Selector);

@@ -1,0 +1,1 @@
+export const CHANGE_SELECTOR: string = "CHANGE_SELECTOR";

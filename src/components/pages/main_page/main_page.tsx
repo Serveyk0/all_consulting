@@ -1,7 +1,7 @@
 import React from 'react';
 import { MySlider } from "./slider/slider";
 import "./main_page.sass";
-import { Selector } from './selector/selector';
+import Selector from './selector/selector';
 import { Menu } from './menu/menu';
 import { show } from './../../show';
 
@@ -13,7 +13,7 @@ export const MainPage = ( ): JSX.Element =>
             <MySlider />
             <div className="main_page_description">
                 <div className="main_page_description_selector">
-                    <Selector select={0} />
+                    <Selector />
                 </div>
                 <Menu />
             </div>
