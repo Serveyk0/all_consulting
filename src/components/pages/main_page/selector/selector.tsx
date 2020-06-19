@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { selection_array, select_object, form_request_call, form_consultation } from "./constant";
+import { selection_array, select_object } from "./constant";
 
 import "./selector.sass";
 import { Form } from './form/form';
@@ -24,8 +24,7 @@ export const Selector: React.FC = (  ): JSX.Element =>
             </div>
             <div className="selector_description_items">
                 {
-                    select_item.description === "form_request_call" ? <Form description_form={form_request_call} /> :
-                    select_item.description === "form_consultation" ? <Form description_form={form_consultation} /> :
+                    select_item.description === "" ? <Form /> :
                     <span className="description active_description" >{select_item.description}</span>
                 }   
             </div>
