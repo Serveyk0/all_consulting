@@ -1,6 +1,12 @@
-export const descript: string = "";
+export interface href
+{
+    name: string
+    name_href: string
+    item_array: Array<string>
+    item_href: Array<string>
+}
 
-export const href_component =
+const href_component_1 : Array<href> =
 [
     {
         name: "Паспортно-визовые услуги",
@@ -28,3 +34,42 @@ export const href_component =
         ]
     }
 ]
+
+const href_component_2: Array<href> = 
+[
+    {
+        name: "Меню 2",
+        name_href: "menu_2",
+        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        item_href: 
+        [
+            "outstaffing", 
+            "personnel_services", 
+            "accounting_and_personnel_support"
+        ]
+    },
+    {
+        name: "Меню 3",
+        name_href: "menu_3",
+        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        item_href: 
+        [
+            "outstaffing", 
+            "personnel_services", 
+            "accounting_and_personnel_support"
+        ]
+    },
+    {
+        name: "Меню 4",
+        name_href: "menu_4",
+        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        item_href: 
+        [
+            "outstaffing", 
+            "personnel_services", 
+            "notary_translations"
+        ]
+    }
+]
+
+export const href_component_array: Array<Array<href>> = [href_component_1, href_component_2];

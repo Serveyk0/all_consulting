@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { send, reset } from './constant';
+import { send, reset, form_request_call } from './constant';
 
 import "./form.sass";
 
-export const Form = ( props: any ): JSX.Element =>  
+export const Form = (  ): JSX.Element =>  
 {
     const [field_1, set_field_1] = useState("");
     const [field_2, set_field_2] = useState("");
@@ -24,12 +24,11 @@ export const Form = ( props: any ): JSX.Element =>
     {
         e.preventDefault();
         const body = {
-            field_1: "kukljlj",
+            field_1: field_1,
             field_2: field_2, 
             field_3: field_3,
             field_4: field_4,
-            field_5: field_5,
-            name: description_form[description_form.length - 1]
+            field_5: field_5
         }
         fetch('/sendMail', {
             method: 'POST',
@@ -52,24 +51,19 @@ export const Form = ( props: any ): JSX.Element =>
 
     const change_field = ( event: any, set_field: Function ) => 
         set_field(event.target.value);
-    const {description_form} = props;
 
 
     return (
         <div className="wrapper_form">
             <form className="form">
-                {description_form.map((item: any, index: number) => { return ( 
+                {form_request_call.map((item: any, index: number) => { return ( 
                     <div key={index} className="form_field">
-                        { Object.keys(description_form).length > index + 1 ? <span className="form_field_text">{item}</span> : "" }
-                        {Object.keys(description_form).length > index + 2
+                        <span className="form_field_text">{item}</span>
+                        {Object.keys(form_request_call).length > index + 1
                         ?
                             <input type="text" value={fields_array[index][0]} className="form_field_input" name={item} onChange={(e) => change_field(e, fields_array[index][1])} />
                         :
-                        Object.keys(description_form).length > index + 1 
-                        ?
                             <textarea className="form_field_textarea" value={fields_array[index][0]} name={item} onChange={(e) => change_field(e, fields_array[index][1])} ></textarea>
-                        :
-                        ""
                         }
                     </div>
                 )})}
