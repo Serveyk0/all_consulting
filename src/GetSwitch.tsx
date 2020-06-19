@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { MainPage } from './components/pages/main_page/main_page';
 import { AdditionalServices } from './components/pages/additional_services/additional_services';
@@ -13,12 +13,10 @@ import { WorkInvitations } from './components/pages/work_invitations/work_invita
 import { PersonnelServices } from './components/pages/personnel_services/personnel_services';
 import { AAPS } from './components/pages/accounting_and_personnel_support/aaps';
 
-export class GetSwitch extends React.Component {
-    render () {
-    const [ select_item, set_select_item ] = useState(0);
+export const GetSwitch = ( ) => {
 	return(
 		<Switch>
-            <Route exact path='/'                                         render={() => { return( <MainPage selector_props={select_item} />)}}/>
+            <Route exact path='/'                                         component={MainPage} />
             <Route exact path='/additional_services'                      component={AdditionalServices} />
             <Route exact path='/business_invitations'                     component={BusinessInvitations} />
             <Route exact path='/commercial_invitations'                   component={CommercialInvitations} />
@@ -33,4 +31,3 @@ export class GetSwitch extends React.Component {
         </Switch>
         )
     }
-};

@@ -10,7 +10,6 @@ export const Header: React.FC = (  ): JSX.Element =>
     const change_value = ( event: any ) => 
         set_search_val ( event.target.value );
 
-    console.log(search_val);
     return (
         <header className="header"> 
             <a href="/#">

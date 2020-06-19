@@ -9,7 +9,6 @@ export let show = function( )
 let show_method = function () 
 {
     let foo = document.getElementById("main_menu");
-    console.log(window.location.href.split("/")[4])
     if(window.location.href.split("/")[4] !== "")
     {
         foo.classList.remove('hide_menu');

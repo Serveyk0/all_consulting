@@ -4,7 +4,8 @@ export interface select_object {
 }
 
 export type selector_props = {
-    selector_props: number
+    select_item: number
+    set_select_item: Function
 }
 
 export interface form {
