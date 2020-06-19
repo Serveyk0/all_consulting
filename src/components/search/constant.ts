@@ -1,12 +1,6 @@
-export interface href
-{
-    name: string
-    name_href: string
-    item_array: Array<string>
-    item_href: Array<string>
-}
+export const descript: string = "";
 
-const href_component_1 : Array<href> =
+export const href_component =
 [
     {
         name: "Паспортно-визовые услуги",
@@ -28,24 +22,20 @@ const href_component_1 : Array<href> =
         [
             "outstaffing", 
             "personnel_services", 
-            "notarized_translations", 
+            "notary_translations", 
             "medical_services", 
             "accounting_and_personnel_support"
         ]
-    }
-]
-
-const href_component_2: Array<href> = 
-[
+    },
     {
         name: "Меню 2",
         name_href: "menu_2",
         item_array: ["подменю 1", "подменю 2", "подменю 3"],
         item_href: 
         [
-            "outstaffing", 
-            "personnel_services", 
-            "accounting_and_personnel_support"
+            "submenu 1", 
+            "submenu 2", 
+            "submenu 3"
         ]
     },
     {
@@ -54,9 +44,9 @@ const href_component_2: Array<href> =
         item_array: ["подменю 1", "подменю 2", "подменю 3"],
         item_href: 
         [
-            "outstaffing", 
-            "personnel_services", 
-            "accounting_and_personnel_support"
+            "submenu 4", 
+            "submenu 5", 
+            "submenu 6"
         ]
     },
     {
@@ -65,11 +55,18 @@ const href_component_2: Array<href> =
         item_array: ["подменю 1", "подменю 2", "подменю 3"],
         item_href: 
         [
-            "outstaffing", 
-            "personnel_services", 
-            "notary_translations"
+            "submenu 7", 
+            "submenu 8", 
+            "submenu 9"
+        ]
+    },
+    {
+        name: "Обратная связь",
+        name_href: "/",
+        item_array: ["Заказать звонок"],
+        item_href: 
+        [
+            "/",
         ]
     }
 ]
-
-export const href_component_array: Array<Array<href>> = [href_component_1, href_component_2];

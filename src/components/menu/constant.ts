@@ -28,12 +28,46 @@ export const href_component =
         ]
     },
     {
+        name: "Меню 2",
+        name_href: "menu_2",
+        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        item_href: 
+        [
+            "submenu 1", 
+            "submenu 2", 
+            "submenu 3"
+        ]
+    },
+    {
+        name: "Меню 3",
+        name_href: "menu_3",
+        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        item_href: 
+        [
+            "submenu 4", 
+            "submenu 5", 
+            "submenu 6"
+        ]
+    },
+    {
+        name: "Меню 4",
+        name_href: "menu_4",
+        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        item_href: 
+        [
+            "submenu 7", 
+            "submenu 8", 
+            "submenu 9"
+        ]
+    },
+    {
         name: "Обратная связь",
         name_href: "/",
-        item_array: ["Заказать звонок"],
+        item_array: ["О нас", "Заказать звонок"],
         item_href: 
         [
             "/",
+            "/"
         ]
     }
 ]

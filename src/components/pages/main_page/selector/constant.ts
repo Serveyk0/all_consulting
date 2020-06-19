@@ -3,6 +3,10 @@ export interface select_object {
     description: string
 }
 
+export type selector_props = {
+    selector_props: number
+}
+
 export interface form {
     field_1: string
     field_2: string

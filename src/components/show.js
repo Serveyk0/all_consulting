@@ -3,7 +3,7 @@ export let show = function( )
     if (document.readyState === "complete") 
         show_method ( );
     else
-        document.body.onload = function() { show() };
+        document.body.onload = function() { show_method() };
 }
 
 let show_method = function () 

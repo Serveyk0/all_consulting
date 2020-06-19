@@ -9,7 +9,7 @@ export const Menu: React.FC = (  ): JSX.Element =>
         <div className="menu">
             {
                 href_component_array.map((href_item: Array<href>, href_index: number) => { return ( 
-                    <div>
+                    <div key={href_index}>
                         {Object.values(href_item).map((ul_item, ul_index) => { return ( 
                             <React.Fragment key={ul_index}>
                                 { ul_index + 1 !== Object.values(href_item).length ? "" : <div></div> }

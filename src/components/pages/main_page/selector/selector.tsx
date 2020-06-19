@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { selection_array, select_object } from "./constant";
+import { selection_array, select_object, selector_props } from "./constant";
 
 import "./selector.sass";
 import { Form } from './form/form';
 
-export const Selector: React.FC = (  ): JSX.Element =>  
+export const Selector = ( props: selector_props ) =>  
 {
+    const { selector_props } = props;
+
     const [select_index, set_select_index] = useState(0);
     const [select_item, set_select_item] = useState(selection_array[0]);
 
@@ -13,6 +15,12 @@ export const Selector: React.FC = (  ): JSX.Element =>
     {
         set_select_index(index);
         set_select_item(selection_array[index]);
+    }
+
+    if ( selector_props !== select_index )
+    {
+        set_select_index(selector_props);
+        set_select_item(selection_array[selector_props]);
     }
 
     return (
