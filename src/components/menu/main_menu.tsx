@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { href_component } from "./constant";
 import { show } from '../show';
 import "./main_menu.sass";
-import { search } from '../search/search';
+import { Search } from '../search/search';
 
 const MainMenu = ( props: any ): JSX.Element =>  
 {
@@ -18,9 +18,9 @@ const MainMenu = ( props: any ): JSX.Element =>
         set_path(window.location.href.split('/')[4])
 
     show()
-    search();
     return (
         <div id="main_menu" className="main_menu">
+            <Search />
             {
                 Object.values(href_component).map((ul_item, ul_index) => { 
                     let check_link = ul_index + 1 === Object.values(href_component).length ? true : false;

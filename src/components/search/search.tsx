@@ -1,13 +1,13 @@
 import data from "./search_queries.json"
-export const search = ( ) => 
+import React from "react";
+
+export const Search = ( ) => 
 {
-    data.map((item, index) => { 
-        Object.values(item).map((item2, index2) => { 
-            //@ts-ignore
-            item2.queries.map((item3, index3) => { return (
-                //@ts-ignore
-                console.log(item2[0])
-            )})
+    return (
+        data.map((item, index) => { 
+            item.queries.map((item2, index2) => { 
+                <div>{item2 + item.href}</div>;
+            })
         })
-    })
+    )
 }
