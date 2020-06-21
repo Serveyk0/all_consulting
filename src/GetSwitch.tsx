@@ -16,18 +16,18 @@ import { AAPS } from './components/pages/accounting_and_personnel_support/aaps';
 export const GetSwitch = ( ) => {
 	return(
 		<Switch>
-            <Route exact path='/'                                         component={MainPage} />
-            <Route exact path='/additional_services'                      component={AdditionalServices} />
-            <Route exact path='/business_invitations'                     component={BusinessInvitations} />
-            <Route exact path='/commercial_invitations'                   component={CommercialInvitations} />
-            <Route exact path='/medical_services'                         component={MedicalServices} />
-            <Route exact path='/notarized_translations'                   component={NotarizedTranslations} />
-            <Route exact path='/outstaffing'                              component={Outstaffing} />
-            <Route exact path='/passport_and_visa_services'               component={PassportAndVisaServices} />
-            <Route exact path='/renewal_of_work_visas'                    component={RenewalOfWorkVisas} />
-            <Route exact path='/work_invitations'                         component={WorkInvitations} />
-            <Route exact path='/personnel_services'                       component={PersonnelServices} />
-            <Route exact path='/accounting_and_personnel_support'         component={AAPS} />
+            <Route exact path='/'                                                                    component={MainPage} />
+            <Route exact path='/additional_services'                                                 component={AdditionalServices} />
+            <Route path='/passport_and_visa_services/business_invitations'                     component={BusinessInvitations} />
+            <Route path='/passport_and_visa_services/commercial_invitations'                   component={CommercialInvitations} />
+            <Route path='/additional_services/medical_services'                                component={MedicalServices} />
+            <Route path='/additional_services/notarized_translations'                          component={NotarizedTranslations} />
+            <Route path='/additional_services/outstaffing'                                     component={Outstaffing} />
+            <Route exact path='/passport_and_visa_services'                                          component={PassportAndVisaServices} />
+            <Route path='/passport_and_visa_services/renewal_of_work_visas'                    component={RenewalOfWorkVisas} />
+            <Route path='/passport_and_visa_services/work_invitations'                         component={WorkInvitations} />
+            <Route path='/additional_services/personnel_services'                              component={PersonnelServices} />
+            <Route path='/additional_services/accounting_and_personnel_support'                component={AAPS} />
         </Switch>
         )
     }

@@ -1,9 +1,13 @@
 @import "../../media/mixin/font_size.sass";
+@import "../../media/keyframes/show_menu.sass";
+
+
 
 .main_menu
     font-family: Arial
     display: grid
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr
+    grid-row-gap: 10px
     .main_menu_title
         @include fluidFontSize(10px, 14px, 480px, 1256px, 12px)
         font-weight: bold
@@ -14,6 +18,10 @@
             color: #ff00009e
     .main_menu_block
         padding: 0
+        margin: 0
+        display: none
+        overflow: hidden
+        position: relative
         .main_menu_block_item
             list-style-type: none
             .main_menu_block_item_link
@@ -21,10 +29,11 @@
                 color: #333333
                 font-size: 14px
                 font-weight: normal
-                display: grid
                 grid-template-columns: 10px auto
                 grid-column-gap: 10px
                 align-items: center
+                grid-column-gap: 10px
+                display: grid
                 &:hover
                     color: #ff00009e
                 &:before
@@ -33,10 +42,21 @@
                     &:hover
                         color: #ff00009e
 .show_menu
-    display: block !important
+    display: grid !important
 
 .hide_menu
     display: none !important
 
 .acctive_menu_item
     color: #ff00009e
+
+.main_menu_block_active
+    display: grid !important
+    animation-duration: 1s
+    animation-name: show_menu
+    animation-timing-function: linear
+
+.wrapper_div
+    height: 100%
+    overflow: hidden
+    display: grid

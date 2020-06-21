@@ -1,17 +1,22 @@
-import React from 'react';
-import { href_component } from "./constant";
-import { NavLink, Link } from "react-router-dom";
-import "./main_menu.sass";
+import React, { useState } from 'react';
+import { NavLink, Link, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
+
+import { href_component } from "./constant";
+import { show } from '../show';
+import "./main_menu.sass";
 
 const MainMenu = ( props: any ): JSX.Element =>  
 {
     const {changeSel} = props;
-
-    const changeSelect = (li_index: number) => 
-    {
+    const [path, set_path] = useState("");
+    const changeSelect = ( li_index: number ) => 
         changeSel(li_index)
-    }
+
+    if ( path !== window.location.href.split('/')[4])
+        set_path(window.location.href.split('/')[4])
+
+    show()
     return (
         <div id="main_menu" className="main_menu">
             {
@@ -19,13 +24,14 @@ const MainMenu = ( props: any ): JSX.Element =>
                     let check_link = ul_index + 1 === Object.values(href_component).length ? true : false;
                     return ( 
                     <React.Fragment key={ul_index}>
+                        <div className="wrapper_div">
                         {!check_link ? <NavLink  to={ul_item.name_href} className="main_menu_title">{ul_item.name}</NavLink>
                         :
                         <Link to={ul_item.name_href} className="main_menu_title">{ul_item.name}</Link>}
-                        <ul className="main_menu_block">       
+                        <ul id={ul_item.name} className={"main_menu_block" + ( "/" + path === ul_item.name_href ? " main_menu_block_active" : "")}>       
                             {
                                 Object.values(ul_item.item_array).map((li_item: string, li_index: number) => { return ( 
-                                    <li key={li_index} className="main_menu_block_item">
+                                    <li id={path} key={li_index} className="main_menu_block_item">
                                         {!check_link ? <NavLink to={ul_item.item_href[li_index]} className="main_menu_block_item_link">{li_item}</NavLink>
                                         : 
                                         <Link to= { ul_item.item_href[li_index] } 
@@ -34,6 +40,7 @@ const MainMenu = ( props: any ): JSX.Element =>
                                 )})
                             }
                         </ul>
+                        </div>
                     </React.Fragment>
                 )})
             }
@@ -55,4 +62,4 @@ const mapDispatchToProps = (dispatch: any) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainMenu);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(MainMenu));
