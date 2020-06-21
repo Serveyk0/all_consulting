@@ -1,0 +1,17 @@
+[
+    {
+        "href": "/",
+        "queries": 
+        [
+            "Заказать звонок",
+            "О нас"
+        ]
+    },
+    {
+        "href": "/passport_and_visa_services",
+        "queries": 
+        [
+            "Бізнес заходи"
+        ]
+    }
+]

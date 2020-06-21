@@ -4,3 +4,10 @@
     border: 1px solid;
     padding: 20px;
 }
+
+.content
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+}

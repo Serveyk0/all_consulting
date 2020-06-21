@@ -8,8 +8,10 @@ export const App = ( props: any) => {
     return (
       <div className="App">
         <Header />
-        <MainMenu />
-        { props.children }
+        <div className="content">
+          <MainMenu />
+          { props.children }
+        </div>
         <Footer />
       </div>
     );
