@@ -4,7 +4,6 @@ import { show } from '../../show';
 
 export const MedicalServices: React.FC = (  ): JSX.Element =>  
 {
-    debugger;
     show();
     return (
         <div className="medical_services">

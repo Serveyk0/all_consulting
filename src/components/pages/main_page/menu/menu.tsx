@@ -2,9 +2,18 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import "./menu.sass";
 import { href_component_array, href } from "./constant";
+import { connect } from 'react-redux';
 
-export const Menu: React.FC = (  ): JSX.Element =>  
+type MenuProps = 
 {
+    changePg: Function
+    changePage: any
+}
+
+
+const Menu = ( props: MenuProps): JSX.Element =>  
+{
+    const { changePg } = props;
     return (
         <div className="menu">
             {
@@ -14,12 +23,12 @@ export const Menu: React.FC = (  ): JSX.Element =>
                             <React.Fragment key={ul_index}>
                                 { ul_index + 1 !== Object.values(href_item).length ? "" : <div></div> }
                                 <div>
-                                    <NavLink to={ul_item.name_href} className="menu_title">{ul_item.name}</NavLink>
+                                    <NavLink to={ul_item.name_href} className="menu_title" onClick={ () => { changePg( href_index * 2 + ul_index )}}>{ul_item.name}</NavLink>
                                     <ul className="menu_block">       
                                         {
                                             Object.values(ul_item.item_array).map((li_item, li_index) => { return ( 
                                                 <li key={li_index} className="menu_block_item">
-                                                    <NavLink to={ul_item.item_href[li_index]} className="menu_block_item_link">{li_item}</NavLink>
+                                                    <NavLink to={ul_item.item_href[li_index]} className="menu_block_item_link" onClick={ () => changePg(href_index * 2 + ul_index)}>{li_item}</NavLink>
                                                 </li>
                                             )})
                                         }
@@ -33,3 +42,20 @@ export const Menu: React.FC = (  ): JSX.Element =>
         </div>
     )
 }
+
+const mapStateToProps = (state: any) => {
+	return {
+        changePage: state.changePage,
+    }
+};
+
+
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        changePg: (pg: any) => {
+            dispatch({ type: 'CHANGE_PAGE', page : pg });
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);

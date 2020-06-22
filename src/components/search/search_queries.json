@@ -13,5 +13,13 @@
         [
             "Бізнес заходи"
         ]
+    },
+    {
+        "href": "/additional_services/personnel_services",
+        "queries": 
+        [
+            "Заголовок 1",
+            "Заголовок 2"
+        ]
     }
 ]

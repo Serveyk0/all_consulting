@@ -10,7 +10,7 @@
     grid-row-gap: 15px
     height: min-content
     .main_menu_title
-        @include fluidFontSize(10px, 14px, 480px, 1256px, 12px)
+        font-size: 14px
         font-weight: bold
         text-decoration: none
         color: #333333
@@ -23,6 +23,7 @@
         display: none
         overflow: hidden
         position: relative
+        width: 90%
         .main_menu_block_item
             list-style-type: none
             .main_menu_block_item_link
@@ -62,3 +63,21 @@
     overflow: hidden
     display: grid
     grid-row-gap: 15px
+    .wrapper_div_link_href
+        display: grid
+        align-items: center
+        grid-template-columns: 9fr 1fr
+        .wrapper_div_link_href_plus
+            font-size: 20px
+            text-align: center
+            -webkit-user-select: none
+            -khtml-user-select: none
+            -moz-user-select: none
+            -ms-user-select: none
+            user-select: none
+            &:hover
+                cursor: default
+                color: red
+        .wrapper_div_link_href_plus_color
+            color: red
+                

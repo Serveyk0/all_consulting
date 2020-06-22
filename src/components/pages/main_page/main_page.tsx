@@ -2,7 +2,7 @@ import React from 'react';
 import { MySlider } from "./slider/slider";
 import "./main_page.sass";
 import Selector from './selector/selector';
-import { Menu } from './menu/menu';
+import Menu from './menu/menu';
 import { show } from './../../show';
 
 export const MainPage = ( ): JSX.Element =>  
