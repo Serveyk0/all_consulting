@@ -62,7 +62,7 @@ const MainMenu = ( props: any ): JSX.Element =>
                                     <span className={"wrapper_div_link_href_plus" + (page === ul_index ? " wrapper_div_link_href_plus_color" : "") } onClick={ () => change_sublist(ul_index, ul_item.name_href)}>{page === ul_index ? "-" : "+"}</span>
                                 </>
                                 :
-                                <Link to={ul_item.name_href} className="main_menu_title" onClick={ () => changeSelect(-1) } >{ul_item.name}</Link>}
+                                <Link to={ul_item.name_href} className="main_menu_title" onClick={ () => changeSelect(0) } >{ul_item.name}</Link>}
                                 
                             </div>
                             <ul id={ul_item.name} className={"main_menu_block" + (page === ul_index || check_link  ? " main_menu_block_active" : "")}>       

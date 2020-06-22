@@ -10,6 +10,7 @@ const Selector = ( props: any ) =>
     const { cs } = props.changeSelector;
     const { changeSel } = props;
 
+    console.log(cs);
     const handle_change = ( index: number ) => 
         changeSel(index);
 
