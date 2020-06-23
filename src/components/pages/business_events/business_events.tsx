@@ -1,11 +1,11 @@
 import React from 'react';
-import "./passport_and_visa_services.sass";
+import "./business_events.sass";
 import { show } from '../../show';
 import { main_text, title } from "./constant";
 import { check_title } from '../../check_title';
 import "../../common_styles.sass";
 
-export const PassportAndVisaServices: React.FC = ( props: any ): JSX.Element =>  
+export const BusinessEvents: React.FC = ( props: any ): JSX.Element =>  
 {
     show();
     let search: string = "";
@@ -13,7 +13,7 @@ export const PassportAndVisaServices: React.FC = ( props: any ): JSX.Element =>
         search = props.location.propsSearch;
 
     return (
-        <div className="passport_and_visa_services">
+        <div className="business_events">
             <h1 className="common_title">
                 { search !== "" ? ( check_title( search, title ) ) : title}
             </h1>

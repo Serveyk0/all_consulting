@@ -19,10 +19,13 @@ export const check_title = ( search: string, title : string ): JSX.Element =>
     const check_first_letter = ( check_string : string ) => 
     {
         const split_title: Array<string> = title.split(" ");
+        check_string = check_string.replace(/\s/g, '')
         for ( let i: number = 0; i < split_title.length; i ++ )
         {
             if ( split_title[i].toLowerCase( ) === check_string && split_title[i] !== check_string)
                 return check_string.charAt(0).toUpperCase()  + check_string.substr(1);
+            else
+                return check_string;
         }
     }
 
@@ -36,7 +39,7 @@ export const check_title = ( search: string, title : string ): JSX.Element =>
                     <React.Fragment key={index}>
                         {item === "" ? 
                         <span className="search_value">{(index > 0 ? " " : "") + check_first_letter(lower_search)}</span> :
-                        item}
+                        check_first_letter(item)}
                     </React.Fragment>
                 )
             })

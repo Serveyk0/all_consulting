@@ -3,15 +3,15 @@ export const descript: string = "";
 export const href_component =
 [
     {
-        name: "Паспортно-визовые услуги",
-        name_href: "/passport_and_visa_services",
-        item_array: ["Деловые приглашения", "Коммерческие приглашения", "Рабочие приглашеня", "Переоформление рабочих виз"],
+        name: "Бізнес заходи",
+        name_href: "/business_events",
+        item_array: ["Податковий консалтинг", "Кадровий облік", "Бухгалтерський супровід", "Переоформление рабочих виз"],
         item_href: 
         [
-            "/passport_and_visa_services/business_invitations",
-            "/passport_and_visa_services/commercial_invitations", 
-            "/passport_and_visa_services/work_invitations", 
-            "/passport_and_visa_services/enewal_of_work_visas"
+            "/business_events/tax_consulting",
+            "/business_events/personnel_accounting", 
+            "/business_events/accounting_support", 
+            "/business_events/enewal_of_work_visas"
         ]
     },
     {

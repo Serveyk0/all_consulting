@@ -41,7 +41,7 @@ const SplitString = ( props: props_type ): JSX.Element =>
                     onClick={ () => {set_search(""); set_search_val("");
                     Object.values(href_component).map((ul_item, ul_index) => { 
                         return ( ul_item.name_href === "/" + item.href.split("/")[1] ) ?
-                        ul_item.name_href === "/" ? changePg(-1) : null : null
+                        ul_item.name_href === "/" ? changePg(-1) : changePg(ul_index) : null
                     })
                 } } replace>{string_item}</Link>
                     : null

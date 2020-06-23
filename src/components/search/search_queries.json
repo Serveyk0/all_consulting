@@ -8,7 +8,7 @@
         ]
     },
     {
-        "href": "/passport_and_visa_services",
+        "href": "/business_events",
         "queries": 
         [
             "Бізнес заходи"
@@ -20,6 +20,27 @@
         [
             "Заголовок 1",
             "Заголовок 2"
+        ]
+    },
+    {
+        "href": "/business_events/tax_consulting",
+        "queries": 
+        [
+            "Податковий консалтинг"
+        ]
+    },
+    {
+        "href": "/business_events/personnel_accounting",
+        "queries": 
+        [
+            "Кадровий облік"
+        ]
+    },
+    {
+        "href": "/business_events/accounting_support",
+        "queries": 
+        [
+            "Бухгалтерський супровід"
         ]
     }
 ]
