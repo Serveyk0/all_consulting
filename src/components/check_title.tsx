@@ -21,11 +21,12 @@ export const check_title = ( search: string, title : string ): JSX.Element =>
         const split_title: Array<string> = title.split(" ");
         check_string = check_string.replace(/\s/g, '')
         for ( let i: number = 0; i < split_title.length; i ++ )
-        {
+        {   
+            let check_index: string = split_title[i].toLowerCase( ) === check_string && (i + 1 === split_title.length) ? "" : " ";
+            if ( split_title[i] === check_string )
+                return check_string + check_index;
             if ( split_title[i].toLowerCase( ) === check_string && split_title[i] !== check_string)
-                return check_string.charAt(0).toUpperCase()  + check_string.substr(1);
-            else
-                return check_string;
+                return check_string.charAt(0).toUpperCase()  + check_string.substr(1) + check_index;
         }
     }
 
