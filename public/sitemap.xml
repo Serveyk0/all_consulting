@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="https://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="https://www.w3.org/1999/xhtml" xmlns:mobile="https://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1" xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://all-consulting.web.app#/</loc> </url>
+<url> <loc>https://all-consulting.web.app#/additional_services</loc> </url>
+<url> <loc>https://all-consulting.web.app#/business_events/tax_consulting</loc> </url>
+<url> <loc>https://all-consulting.web.app#/business_events/personnel_accounting</loc> </url>
+<url> <loc>https://all-consulting.web.app#/additional_services/medical_services</loc> </url>
+<url> <loc>https://all-consulting.web.app#/additional_services/notarized_translations</loc> </url>
+<url> <loc>https://all-consulting.web.app#/additional_services/outstaffing</loc> </url>
+<url> <loc>https://all-consulting.web.app#/business_events</loc> </url>
+<url> <loc>https://all-consulting.web.app#/business_events/renewal_of_work_visas</loc> </url>
+<url> <loc>https://all-consulting.web.app#/business_events/accounting_support</loc> </url>
+<url> <loc>https://all-consulting.web.app#/additional_services/personnel_services</loc> </url>
+<url> <loc>https://all-consulting.web.app#/additional_services/accounting_and_personnel_support</loc> </url>
+</urlset>

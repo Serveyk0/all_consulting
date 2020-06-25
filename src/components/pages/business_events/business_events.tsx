@@ -4,6 +4,7 @@ import { show } from '../../show';
 import { main_text, title } from "./constant";
 import { check_title } from '../../check_title';
 import "../../common_styles.sass";
+import {Helmet} from "react-helmet";
 
 export const BusinessEvents: React.FC = ( props: any ): JSX.Element =>  
 {
@@ -14,6 +15,13 @@ export const BusinessEvents: React.FC = ( props: any ): JSX.Element =>
 
     return (
         <div className="business_events">
+            <Helmet>
+                <meta charSet="UTF-8" />
+                <title>{title}</title> 
+                <meta name="keywords" content={main_text} /> 
+                <meta name="description" content={main_text} />  
+                <link rel="canonical" href={window.location.href} />
+            </Helmet>
             <h1 className="common_title">
                 { search !== "" ? ( check_title( search, title ) ) : title}
             </h1>

@@ -4,6 +4,7 @@ import { show } from '../../show';
 import { check_title } from '../../check_title';
 import { main_text, title } from "./constant";
 import "../../common_styles.sass"
+import { Helmet } from 'react-helmet';
 
 export const AccountingSupport: React.FC = ( props: any ): JSX.Element =>  
 {
@@ -13,6 +14,9 @@ export const AccountingSupport: React.FC = ( props: any ): JSX.Element =>
         search = props.location.propsSearch;
     return (
         <div className="accounting_support">
+            <Helmet >
+                <link rel="canonical" href={window.location.href} />
+            </Helmet>
             <h1 className="common_title">
                 { search !== "" ? ( check_title( search, title ) ) : title}
             </h1>

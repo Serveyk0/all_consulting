@@ -3,6 +3,7 @@ import logo from "../../media/main_page/logo.png";
 import { phone_1, phone_2, address, work_day, search } from "./constant";
 
 import "./header.sass";
+import { Link } from 'react-router-dom';
 
 export const Header = ( props: any ): JSX.Element =>  
 {
@@ -15,9 +16,17 @@ export const Header = ( props: any ): JSX.Element =>
 
     return (
         <header className="header"> 
-            <a href="/#">
-                <img alt="все консультации" src={ logo } className="header_logo" />
-            </a>
+        {
+            window.location.href.split("/")[4] === ""
+            ?
+                <span>
+                    <img alt="все консультации" src={ logo } className="header_logo" />
+                </span>
+            :
+                <Link to="/">
+                    <img alt="все консультации" src={ logo } className="header_logo" />
+                </Link>
+        }
             <div className="header_contacts">
                 <div className="header_contacts_phones">
                     <a href= { "tel:" + phone_1 } className="header_contacts_phones_one">{phone_1}</a>

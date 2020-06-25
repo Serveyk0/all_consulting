@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://all-consulting.web.app/sitemap.xml
+Host: https://all-consulting.web.app/

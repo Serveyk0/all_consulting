@@ -18,7 +18,6 @@ const MainMenu = ( props: any ): JSX.Element =>
     const [plus_href, set_plus_href] = useState("");
     const changeSelect = ( li_index: number ) => 
         changeSel(li_index)
-
     if ( path !== window.location.href.split('/')[4])
         set_path(window.location.href.split('/')[4])
 
@@ -52,14 +51,22 @@ const MainMenu = ( props: any ): JSX.Element =>
             {
                 Object.values(href_component).map((ul_item, ul_index) => { 
                     let check_link = ul_index + 1 === Object.values(href_component).length ? true : false;
+                    let spl = window.location.href.split("/");
+                    const str = spl[0] + "/" + spl[1] + "/" + spl[2];
                     return ( 
                     <React.Fragment key={ul_index}>
                         <div className="wrapper_div">
                             <div className="wrapper_div_link_href">
                                 {!check_link ? 
                                 <>
-                                    <NavLink  to={ul_item.name_href} className="main_menu_title"  onClick={ () => change_sublist(ul_index, ul_item.name_href)}>{ul_item.name}</NavLink>
-                                    <span className={"wrapper_div_link_href_plus" + (page === ul_index ? " wrapper_div_link_href_plus_color" : "") } onClick={ () => change_sublist(ul_index, ul_item.name_href)}>{page === ul_index ? "-" : "+"}</span>
+                                    {
+                                        str + ul_item.name_href !== window.location.href ? 
+                                        <NavLink  to={ul_item.name_href} className="main_menu_title"  onClick={ () => change_sublist(ul_index, ul_item.name_href)}>{ul_item.name}</NavLink>
+                                        :
+                                        <span style={{cursor: "pointer"}} className="main_menu_title active">{ul_item.name}</span>
+                                    }
+                                        <span className={"wrapper_div_link_href_plus" + (page === ul_index ? " wrapper_div_link_href_plus_color" : "") } onClick={ () => change_sublist(ul_index, ul_item.name_href)}>{page === ul_index ? "-" : "+"}</span>
+                                    
                                 </>
                                 :
                                 <Link to={ul_item.name_href} className="main_menu_title" onClick={ () => changeSelect(0) } >{ul_item.name}</Link>}
@@ -67,9 +74,14 @@ const MainMenu = ( props: any ): JSX.Element =>
                             </div>
                             <ul id={ul_item.name} className={"main_menu_block" + (page === ul_index || check_link  ? " main_menu_block_active" : "")}>       
                                 {
-                                    Object.values(ul_item.item_array).map((li_item: string, li_index: number) => { return ( 
+                                    Object.values(ul_item.item_array).map((li_item: string, li_index: number) => { 
+                                        return ( 
                                         <li id={path} key={li_index} className="main_menu_block_item">
-                                            {!check_link ? <NavLink to={ul_item.item_href[li_index]} className="main_menu_block_item_link">{li_item}</NavLink>
+                                            {!check_link ? 
+                                            str +  ul_item.item_href[li_index] !== window.location.href ? 
+                                                <NavLink to={ul_item.item_href[li_index]} className="main_menu_block_item_link">{li_item}</NavLink>
+                                            : 
+                                                <span style={{cursor: "pointer"}} className="main_menu_block_item_link active">{li_item}</span>
                                             : 
                                             <Link to= { ul_item.item_href[li_index] } 
                                             className="main_menu_block_item_link" onClick={ () => changeSelect(li_index) }>{li_item}</Link>}

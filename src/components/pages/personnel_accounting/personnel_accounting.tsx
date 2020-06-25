@@ -3,6 +3,7 @@ import "./personnel_accounting.sass";
 import { show } from '../../show';
 import { check_title } from '../../check_title';
 import { main_text, title } from "./constant";
+import { Helmet } from 'react-helmet';
 
 export const PersonnelAccounting: React.FC = ( props: any ): JSX.Element =>  
 {
@@ -12,7 +13,10 @@ export const PersonnelAccounting: React.FC = ( props: any ): JSX.Element =>
         search = props.location.propsSearch;
     return (
         <div className="personnel_accounting">
-                        <h1 className="common_title">
+            <Helmet >
+                <link rel="canonical" href={window.location.href} />
+            </Helmet>
+            <h1 className="common_title">
                 { search !== "" ? ( check_title( search, title ) ) : title}
             </h1>
             <div className="common_text">

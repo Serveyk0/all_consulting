@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { MainPage } from './components/pages/main_page/main_page';
 import { AdditionalServices } from './components/pages/additional_services/additional_services';
 import { PersonnelAccounting } from './components/pages/personnel_accounting/personnel_accounting';
@@ -14,9 +14,10 @@ import { PersonnelServices } from './components/pages/personnel_services/personn
 import { AAPS } from './components/pages/accounting_and_personnel_support/aaps';
 
 export const GetSwitch = ( ) => {
+    
 	return(
 		<Switch>
-            <Route exact path='/'                                                                    component={MainPage} />
+            <Route rel="canonical" exact path='/'                                                                    component={MainPage} />
             <Route exact path='/additional_services'                                                 component={AdditionalServices} />
             <Route path='/business_events/tax_consulting'                     component={TaxConsulting} />
             <Route path='/business_events/personnel_accounting'                   component={PersonnelAccounting} />
@@ -28,6 +29,7 @@ export const GetSwitch = ( ) => {
             <Route path='/business_events/accounting_support'                         component={AccountingSupport} />
             <Route path='/additional_services/personnel_services'                              component={PersonnelServices} />
             <Route path='/additional_services/accounting_and_personnel_support'                component={AAPS} />
+            <Redirect from='*' to='/' />
         </Switch>
         )
     }

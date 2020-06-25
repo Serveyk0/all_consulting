@@ -11,7 +11,7 @@ export const href_component =
             "/business_events/tax_consulting",
             "/business_events/personnel_accounting", 
             "/business_events/accounting_support", 
-            "/business_events/enewal_of_work_visas"
+            "/business_events/renewal_of_work_visas"
         ]
     },
     {
