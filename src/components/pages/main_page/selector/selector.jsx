@@ -2,7 +2,7 @@ import React from 'react';
 import { selection_array } from "./constant";
 import { connect } from 'react-redux';
 
-// import "./selector.sass";
+import "./selector.sass";
 import { Form } from './form/form.jsx';
 //@ts-ignore
 const Selector = ( props ) =>  

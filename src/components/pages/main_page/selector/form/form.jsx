@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { send, reset, form_request_call } from './constant';
 
-// import "./form.sass";
+import "./form.sass";
 
 export const Form = (  ) =>  
 {

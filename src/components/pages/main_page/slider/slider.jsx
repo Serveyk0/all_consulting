@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import "./slider.sass";
+import "./slider.sass";
 //@ts-ignore
 import Slider from "infinite-react-carousel";
 import { slides_array } from "./constant";

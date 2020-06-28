@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-// import "./menu.sass";
+import "./menu.sass";
 import { href_component_array } from "./constant";
 import { connect } from 'react-redux';
 

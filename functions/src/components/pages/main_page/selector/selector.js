@@ -11,11 +11,11 @@ var _constant = require("./constant");
 
 var _reactRedux = require("react-redux");
 
+
 var _form = require("./form/form.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import "./selector.sass";
 //@ts-ignore
 var Selector = function Selector(props) {
   var cs = props.changeSelector.cs;

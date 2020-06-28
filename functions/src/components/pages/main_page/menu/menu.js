@@ -15,7 +15,6 @@ var _reactRedux = require("react-redux");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import "./menu.sass";
 var Menu = function Menu(props) {
   var changePg = props.changePg;
   return /*#__PURE__*/_react.default.createElement("div", {
