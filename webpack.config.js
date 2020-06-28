@@ -17,7 +17,7 @@ module.exports =
         rules: [
             // we use babel-loader to load our jsx and tsx files
           {
-            test: /\.(js)x?$/,
+            test: /\.(ts|js)x?$/,
             exclude: /node_modules/,
             loaders: ['babel-loader', 'ts-loader']
           },
@@ -70,7 +70,9 @@ module.exports =
         minimizer: [
             new OptimizeCSSAssetsPlugin({})
         ]
+    },
+    node: {
+      __dirname: false
     }
-
 
 }

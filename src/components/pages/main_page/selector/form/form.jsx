@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { send, reset, form_request_call } from './constant';
 
-import "./form.sass";
+// import "./form.sass";
 
 export const Form = (  ) =>  
 {
@@ -11,7 +11,7 @@ export const Form = (  ) =>
     const [field_4, set_field_4] = useState("");
     const [field_5, set_field_5] = useState("");
 
-    const fields_array: Array<Array<any>> =
+    const fields_array =
     [
         [field_1, set_field_1],
         [field_2, set_field_2],
@@ -20,7 +20,7 @@ export const Form = (  ) =>
         [field_5, set_field_5], 
     ]
 
-    const handleSubmit = (e: React.MouseEvent) => 
+    const handleSubmit = (e) => 
     {
         e.preventDefault();
         const body = {
@@ -43,13 +43,13 @@ export const Form = (  ) =>
         reset_form();
     }
 
-    const reset_form = ( ): void => 
+    const reset_form = ( ) => 
     {
-        for (let i : number = 0; i < fields_array.length; i ++ )
+        for (let i = 0; i < fields_array.length; i ++ )
             fields_array[i][1]("");
     }
 //@ts-ignore
-    const change_field = ( event, set_field: Function ) => 
+    const change_field = ( event, set_field ) => 
         set_field(event.target.value);
 
 
@@ -59,7 +59,7 @@ export const Form = (  ) =>
                 
                 {form_request_call.map(
                     //@ts-ignore
-                    (item, index: number) => { return ( 
+                    (item, index) => { return ( 
                     <div key={index} className="form_field">
                         <span className="form_field_text">{item}</span>
                         {Object.keys(form_request_call).length > index + 1

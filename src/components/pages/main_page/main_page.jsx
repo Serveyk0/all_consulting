@@ -1,8 +1,8 @@
 import React from 'react';
-import { MySlider } from "./slider/slider";
+import { MySlider } from "./slider/slider.jsx";
 // // import "./main_page.sass";
-import Selector from './selector/selector';
-import Menu from './menu/menu';
+import Selector from './selector/selector.jsx';
+import Menu from './menu/menu.jsx';
 import { show } from '../../show';
 import { Helmet } from 'react-helmet';
 

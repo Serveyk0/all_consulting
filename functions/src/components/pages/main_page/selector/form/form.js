@@ -6,9 +6,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.App = void 0;
+exports.Form = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _constant = require("./constant");
 
 // eslint-disable-next-line
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -29,27 +31,108 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// import { Header } from "./components/header/header"
-// import { Footer } from './components/footer/footer';
-// import MainMenu from './components/menu/main_menu';
-// import Search from './components/search/search';
-var App = function App(props) {
+// import "./form.sass";
+var Form = function Form() {
   var _useState = (0, _react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
-      searc = _useState2[0],
-      set_search = _useState2[1]; // const [search_val, set_search_val] = useState("");
+      field_1 = _useState2[0],
+      set_field_1 = _useState2[1];
 
-
-  var _useState3 = (0, _react.useState)(false),
+  var _useState3 = (0, _react.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      app_class = _useState4[0],
-      set_app_class = _useState4[1];
+      field_2 = _useState4[0],
+      set_field_2 = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      field_3 = _useState6[0],
+      set_field_3 = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(""),
+      _useState8 = _slicedToArray(_useState7, 2),
+      field_4 = _useState8[0],
+      set_field_4 = _useState8[1];
+
+  var _useState9 = (0, _react.useState)(""),
+      _useState10 = _slicedToArray(_useState9, 2),
+      field_5 = _useState10[0],
+      set_field_5 = _useState10[1];
+
+  var fields_array = [[field_1, set_field_1], [field_2, set_field_2], [field_3, set_field_3], [field_4, set_field_4], [field_5, set_field_5]];
+
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+    var body = {
+      field_1: field_1,
+      field_2: field_2,
+      field_3: field_3,
+      field_4: field_4,
+      field_5: field_5
+    };
+    fetch('/sendMail', {
+      method: 'POST',
+      body: JSON.stringify(body)
+
+// eslint-disable-next-line
+    }).then(function (response) {
+      console.log(response.status);
+
+// eslint-disable-next-line
+    }).catch(function (err) {
+      console.log(500);
+    });
+    reset_form();
+  };
+
+  var reset_form = function reset_form() {
+    for (var i = 0; i < fields_array.length; i++) {
+      fields_array[i][1]("");
+    }
+  }; //@ts-ignore
+
+
+  var change_field = function change_field(event, set_field) {
+    return set_field(event.target.value);
+  };
 
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "App"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: (app_class ? "app_content" : "") + (searc !== "" ? " hide_block" : "")
-  }, props.children));
+    className: "wrapper_form"
+  }, /*#__PURE__*/_react.default.createElement("form", {
+    className: "form"
+  }, _constant.form_request_call.map( //@ts-ignore
+  function (item, index) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: index,
+      className: "form_field"
+    }, /*#__PURE__*/_react.default.createElement("span", {
+      className: "form_field_text"
+    }, item), Object.keys(_constant.form_request_call).length > index + 1 ? /*#__PURE__*/_react.default.createElement("input", {
+      type: "text",
+      value: fields_array[index][0],
+      className: "form_field_input",
+      name: item,
+      onChange: function onChange(e) {
+        return change_field(e, fields_array[index][1]);
+      }
+    }) : /*#__PURE__*/_react.default.createElement("textarea", {
+      className: "form_field_textarea",
+      value: fields_array[index][0],
+      name: item,
+      onChange: function onChange(e) {
+        return change_field(e, fields_array[index][1]);
+      }
+    }));
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form_field_button"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "form_field_button_reset",
+    onClick: reset_form
+  }, _constant.reset), /*#__PURE__*/_react.default.createElement("span", {
+    className: "form_field_button_send",
+    onClick: handleSubmit
+  }, _constant.send))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form_button"
+  }));
 };
 
-exports.App = App;
+exports.Form = Form;

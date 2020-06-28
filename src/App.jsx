@@ -1,5 +1,5 @@
 import React, { useState, ReactNode } from 'react';
-import './App.sass';
+// import './App.sass';
 // import { Header } from "./components/header/header"
 // import { Footer } from './components/footer/footer';
 // import MainMenu from './components/menu/main_menu';

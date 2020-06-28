@@ -17,6 +17,7 @@
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
     "aws-amplify": "^3.0.18",
+    "babel-jest": "^26.1.0",
     "babel-plugin-css-modules-transform": "^1.6.2",
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -25,6 +26,7 @@
     "image-webpack-loader": "^6.0.0",
     "infinite-react-carousel": "^1.2.11",
     "isomorphic-fetch": "^2.2.1",
+    "jest": "^26.1.0",
     "jest-transform-stub": "^2.0.0",
     "jquery": "^3.5.1",
     "mobx": "^5.15.4",
@@ -103,7 +105,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-        ".+\\.(css|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileMock.js"
     }
-}
+  }
 }

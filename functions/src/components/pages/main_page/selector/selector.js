@@ -11,7 +11,7 @@ var _constant = require("./constant");
 
 var _reactRedux = require("react-redux");
 
-var _form = require("./form/form");
+var _form = require("./form/form.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

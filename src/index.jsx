@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.sass';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-import { GetSwitch } from './GetSwitch';
+import { GetSwitch } from './GetSwitch.jsx';
 import store from './store';
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { MainPage } from './components/pages/main_page/main_page';
+import { MainPage } from './components/pages/main_page/main_page.jsx';
 /*import { AdditionalServices } from './components/pages/additional_services/additional_services';
 import { PersonnelAccounting } from './components/pages/personnel_accounting/personnel_accounting';
 import { TaxConsulting } from './components/pages/tax_consulting/tax_consulting';
@@ -12,7 +12,7 @@ import { RenewalOfWorkVisas } from './components/pages/renewal_of_work_visas/ren
 import { AccountingSupport } from './components/pages/accounting_support/accounting_support';
 import { PersonnelServices } from './components/pages/personnel_services/personnel_services';
 import { AAPS } from './components/pages/accounting_and_personnel_support/aaps';
-*/import { App } from './App';
+*/import { App } from './App.jsx';
 
 export const GetSwitch = ( ) => {
     

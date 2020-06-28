@@ -7,11 +7,11 @@ exports.MainPage = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _slider = require("./slider/slider");
+var _slider = require("./slider/slider.js");
 
-var _selector = _interopRequireDefault(require("./selector/selector"));
+var _selector = _interopRequireDefault(require("./selector/selector.js"));
 
-var _menu = _interopRequireDefault(require("./menu/menu"));
+var _menu = _interopRequireDefault(require("./menu/menu.js"));
 
 var _show = require("../../show");
 

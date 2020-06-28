@@ -9,9 +9,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _main_page = require("./components/pages/main_page/main_page");
+var _main_page = require("./components/pages/main_page/main_page.js");
 
-var _App = require("./App");
+var _App = require("./App.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
