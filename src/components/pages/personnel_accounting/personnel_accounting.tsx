@@ -5,7 +5,8 @@ import { check_title } from '../../check_title';
 import { main_text, title } from "./constant";
 import { Helmet } from 'react-helmet';
 
-export const PersonnelAccounting: React.FC = ( props: any ): JSX.Element =>  
+//@ts-ignore
+export const PersonnelAccounting = ( props ) =>  
 {
     show();
     let search: string = "";
@@ -21,10 +22,10 @@ export const PersonnelAccounting: React.FC = ( props: any ): JSX.Element =>
             </h1>
             <div className="common_text">
             {
-                main_text.map((item: any, index: number) => 
+                main_text.map((item, index: number) => 
                 {
                     return (    
-                        Object.values(item.text).map((tag_item: any, tag_index: number ) => { return ( 
+                        Object.values(item.text).map((tag_item, tag_index: number ) => { return ( 
                             item.tag === "span" ? <span key={tag_index} className="bold_text">{tag_item}</span> :
                             item.tag === "" ? <span key={tag_index}>{tag_item}</span> :
                             item.tag === "p" ? <p key={tag_index}>{tag_item}</p> :

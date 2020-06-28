@@ -3,7 +3,7 @@ import "./notarized_translations.sass";
 import { show } from '../../show';
 import { Helmet } from 'react-helmet';
 
-export const NotarizedTranslations: React.FC = (  ): JSX.Element =>  
+export const NotarizedTranslations = (  ) =>  
 {
     show();
     return (

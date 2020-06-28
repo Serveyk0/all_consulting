@@ -5,8 +5,8 @@ import { main_text, title } from "./constant";
 import { check_title } from '../../check_title';
 import "../../common_styles.sass";
 import {Helmet} from "react-helmet";
-
-export const BusinessEvents: React.FC = ( props: any ): JSX.Element =>  
+//@ts-ignore
+export const BusinessEvents = ( props ) =>  
 {
     show();
     let search: string = "";
@@ -19,7 +19,7 @@ export const BusinessEvents: React.FC = ( props: any ): JSX.Element =>
                 <meta charSet="UTF-8" />
                 <title>{title}</title> 
                 <meta name="keywords" content={main_text} /> 
-                <meta name="description" content={main_text} />  
+                <meta name="description" content={"fmsafasklfl;ka"} />  
                 <link rel="canonical" href={window.location.href} />
             </Helmet>
             <h1 className="common_title">

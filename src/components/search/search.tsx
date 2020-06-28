@@ -7,13 +7,13 @@ import { href_component } from "../menu/constant";
 
 type props_type = 
 {
-    search: string
-    set_search: Function
-    set_search_val: Function
+    search: string,
+    set_search: Function,
+    set_search_val: Function,
     changePg: Function
 }
 
-const SplitString = ( props: props_type ): JSX.Element => 
+const SplitString = ( props: props_type ) => 
 {
     const { search, set_search, set_search_val, changePg } = props;
     const without_double_spaces: string = search.replace(/\s+/g, ' ').trim();
@@ -51,7 +51,7 @@ const SplitString = ( props: props_type ): JSX.Element =>
     return result_array;
 }
 
-export const Search = ( props: props_type ): JSX.Element => 
+export const Search = ( props: props_type ) => 
 {
     const { search, set_search, set_search_val, changePg } = props;
     return (
@@ -64,16 +64,17 @@ export const Search = ( props: props_type ): JSX.Element =>
         </div>
     )
 }
-const mapStateToProps = (state: any) => {
+//@ts-ignore
+const mapStateToProps = (state) => {
 	return {
         changeSelector: state.changeSelector,
         changePage: state.changePage,
     }
 };
-
-const mapDispatchToProps = (dispatch: any) => {
-    return {
-        changePg: (pg: any) => {
+//@ts-ignore
+const mapDispatchToProps = (dispatch) => {
+    return {//@ts-ignore
+        changePg: (pg) => {
             dispatch({ type: 'CHANGE_PAGE', page : pg });
         }
     }

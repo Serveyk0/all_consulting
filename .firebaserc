@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "all-consulting"
+    "default": "all-consulting",
+    "y": "all-consulting"
   }
 }

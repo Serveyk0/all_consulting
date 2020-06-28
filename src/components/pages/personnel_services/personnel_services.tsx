@@ -4,8 +4,8 @@ import { show } from '../../show';
 import { title_1, title_2 } from "./constant";
 import { check_title } from '../../check_title';
 import { Helmet } from 'react-helmet';
-
-export const PersonnelServices: React.FC = ( props: any ): JSX.Element =>  
+//@ts-ignore
+export const PersonnelServices = ( props ) =>  
 {
     show();
     let search: string = "";

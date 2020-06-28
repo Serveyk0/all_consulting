@@ -3,7 +3,7 @@ import "./renewal_of_work_visas.sass";
 import { show } from '../../show';
 import { Helmet } from 'react-helmet';
 
-export const RenewalOfWorkVisas: React.FC = (  ): JSX.Element =>  
+export const RenewalOfWorkVisas = (  ) =>  
 {
     show();
     return (

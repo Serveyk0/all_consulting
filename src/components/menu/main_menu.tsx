@@ -6,8 +6,8 @@ import { show } from '../show';
 
 
 import "./main_menu.sass";
-
-const MainMenu = ( props: any ): JSX.Element =>  
+//@ts-ignore
+const MainMenu = ( props ) =>  
 {
     
     const {changeSel, app_class, changePg} = props;
@@ -96,20 +96,22 @@ const MainMenu = ( props: any ): JSX.Element =>
         </div>
     )
 }
-
-const mapStateToProps = (state: any) => {
+//@ts-ignore
+const mapStateToProps = (state) => {
 	return {
         changeSelector: state.changeSelector,
         changePage: state.changePage,
     }
 };
-
-const mapDispatchToProps = (dispatch: any) => {
+//@ts-ignore
+const mapDispatchToProps = (dispatch) => {
     return {
-        changeSel: (cs: any) => {
+        //@ts-ignore
+        changeSel: (cs) => {
             dispatch({ type: 'CHANGE_SELECTOR', cs : cs });
         },
-        changePg: (pg: any) => {
+        //@ts-ignore
+        changePg: (pg) => {
             dispatch({ type: 'CHANGE_PAGE', page : pg });
         }
     }

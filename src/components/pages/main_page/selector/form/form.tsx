@@ -3,7 +3,7 @@ import { send, reset, form_request_call } from './constant';
 
 import "./form.sass";
 
-export const Form = (  ): JSX.Element =>  
+export const Form = (  ) =>  
 {
     const [field_1, set_field_1] = useState("");
     const [field_2, set_field_2] = useState("");
@@ -48,15 +48,18 @@ export const Form = (  ): JSX.Element =>
         for (let i : number = 0; i < fields_array.length; i ++ )
             fields_array[i][1]("");
     }
-
-    const change_field = ( event: any, set_field: Function ) => 
+//@ts-ignore
+    const change_field = ( event, set_field: Function ) => 
         set_field(event.target.value);
 
 
     return (
         <div className="wrapper_form">
             <form className="form">
-                {form_request_call.map((item: any, index: number) => { return ( 
+                
+                {form_request_call.map(
+                    //@ts-ignore
+                    (item, index: number) => { return ( 
                     <div key={index} className="form_field">
                         <span className="form_field_text">{item}</span>
                         {Object.keys(form_request_call).length > index + 1

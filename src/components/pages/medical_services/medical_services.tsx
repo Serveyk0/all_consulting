@@ -3,7 +3,7 @@ import "./medical_services.sass";
 import { show } from '../../show';
 import { Helmet } from 'react-helmet';
 
-export const MedicalServices: React.FC = (  ): JSX.Element =>  
+export const MedicalServices = (  ) =>  
 {
     show();
     return (

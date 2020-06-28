@@ -3,7 +3,7 @@ import "./outstaffing.sass";
 import { show } from '../../show';
 import { Helmet } from 'react-helmet';
 
-export const Outstaffing: React.FC = (  ): JSX.Element =>  
+export const Outstaffing = (  ) =>  
 {
     show();
     return (

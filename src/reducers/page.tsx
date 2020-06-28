@@ -4,7 +4,13 @@ const initialPageState = {
     page: -1
 }
 
-export const changePage = (state = initialPageState, action: any) => 
+type actionProps = 
+{
+    type: string,
+    page: number
+}
+
+export const changePage = (state = initialPageState, action: actionProps) => 
 {
     if (action.type === CHANGE_PAGE) 
     {

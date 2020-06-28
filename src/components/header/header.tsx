@@ -5,13 +5,15 @@ import { phone_1, phone_2, address, work_day, search } from "./constant";
 import "./header.sass";
 import { Link } from 'react-router-dom';
 
-export const Header = ( props: any ): JSX.Element =>  
+//@ts-ignore
+export const Header = ( props ) =>  
 {
     const { set_search, search_val, set_search_val } = props;
-    const change_value = ( event: any ) => 
+    //@ts-ignore
+    const change_value = ( event ) => 
         set_search_val ( event.target.value );
-    
-    const press_enter = ( event : any ) => 
+    //@ts-ignore
+    const press_enter = ( event ) => 
         event.which === 13 ? set_search(search_val) : null
 
     return (

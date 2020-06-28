@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-export const check_title = ( search: string, title : string ): JSX.Element => 
+export const check_title = ( search: string, title : string ) => 
 {
     let lower_title: string = title.toLowerCase();
     let lower_search: string = search.toLowerCase();

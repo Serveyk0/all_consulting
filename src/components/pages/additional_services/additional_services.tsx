@@ -3,7 +3,7 @@ import "./additional_services.sass";
 import { show } from '../../show';
 import { Helmet } from 'react-helmet';
 
-export const AdditionalServices: React.FC = (  ): JSX.Element =>  
+export const AdditionalServices = (  ) =>  
 {
     show();
     return (

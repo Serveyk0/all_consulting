@@ -2,7 +2,7 @@ import React from 'react';
 import { ooo, description } from "./constants";
 import "./footer.sass";
 
-export const Footer: React.FC = ( ): JSX.Element=>  
+export const Footer = ( )=>  
 {
 
     return (
