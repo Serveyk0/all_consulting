@@ -1,9 +1,13 @@
-
 const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
-
-
-
+const express = require('express');
+const app = express();
+app.use(require('prerender-node').set('prerenderToken', 'CJGLAmZkIhoOoODmJAIt'));
+app.use(require('prerender-node').whitelisted(['/#/business_events', '/business_events']));
+app.use(require('prerender-node').set('beforeRender', function(req: any, done: any) {
+	app.use(require('prerender-node').set('prerenderToken', 'CJGLAmZkIhoOoODmJAIt'));
+	done();
+}));
 
 const mailTransport = nodemailer.createTransport({
   service: 'gmail',

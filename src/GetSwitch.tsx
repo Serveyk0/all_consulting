@@ -1,17 +1,29 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { MainPage } from './components/pages/main_page/main_page';
-import { AdditionalServices } from './components/pages/additional_services/additional_services';
-import { PersonnelAccounting } from './components/pages/personnel_accounting/personnel_accounting';
-import { TaxConsulting } from './components/pages/tax_consulting/tax_consulting';
-import { MedicalServices } from './components/pages/medical_services/medical_services';
-import { NotarizedTranslations } from './components/pages/notarized_translations/notarized_translations';
-import { Outstaffing } from './components/pages/outstaffing/outstaffing';
-import { BusinessEvents } from './components/pages/business_events/business_events';
-import { RenewalOfWorkVisas } from './components/pages/renewal_of_work_visas/renewal_of_work_visas';
-import { AccountingSupport } from './components/pages/accounting_support/accounting_support';
-import { PersonnelServices } from './components/pages/personnel_services/personnel_services';
-import { AAPS } from './components/pages/accounting_and_personnel_support/aaps';
+//@ts-ignore
+import { MainPage } from './components/pages/main_page/main_page.tsx';
+//@ts-ignore
+import { AdditionalServices } from './components/pages/additional_services/additional_services.tsx';
+//@ts-ignore
+import { PersonnelAccounting } from './components/pages/personnel_accounting/personnel_accounting.tsx';
+//@ts-ignore
+import { TaxConsulting } from './components/pages/tax_consulting/tax_consulting.tsx';
+//@ts-ignore
+import { MedicalServices } from './components/pages/medical_services/medical_services.tsx';
+//@ts-ignore
+import { NotarizedTranslations } from './components/pages/notarized_translations/notarized_translations.tsx';
+//@ts-ignore
+import { Outstaffing } from './components/pages/outstaffing/outstaffing.tsx';
+//@ts-ignore
+import { BusinessEvents } from './components/pages/business_events/business_events.tsx';
+//@ts-ignore
+import { RenewalOfWorkVisas } from './components/pages/renewal_of_work_visas/renewal_of_work_visas.tsx';
+//@ts-ignore
+import { AccountingSupport } from './components/pages/accounting_support/accounting_support.tsx';
+//@ts-ignore
+import { PersonnelServices } from './components/pages/personnel_services/personnel_services.tsx';
+//@ts-ignore
+import { AAPS } from './components/pages/accounting_and_personnel_support/aaps.tsx';
 
 export const GetSwitch = ( ) => {
 	return(
