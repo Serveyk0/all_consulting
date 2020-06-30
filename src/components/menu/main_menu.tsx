@@ -48,7 +48,7 @@ const MainMenu = ( props: any ): JSX.Element =>
     }
     show()
     return (
-        <div id="main_menu" className="main_menu">
+        <div id="main_menu" className="main_menu hide_menu">
             {
                 Object.values(href_component).map((ul_item, ul_index) => { 
                     let check_link = ul_index + 1 === Object.values(href_component).length ? true : false;

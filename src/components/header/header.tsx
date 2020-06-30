@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../media/main_page/logo.png";
+import logo from "../../media/main_page/mainLogo.jpg";
 import { phone_1, phone_2, address, work_day, search } from "./constant";
 
 import "./header.sass";

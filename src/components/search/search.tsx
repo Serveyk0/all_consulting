@@ -16,7 +16,7 @@ type props_type =
 const SplitString = ( props: props_type ): JSX.Element => 
 {
     const { search, set_search, set_search_val, changePg } = props;
-    const without_double_spaces: string = search.replace(/\s+/g, ' ').trim();
+    let without_double_spaces: string = search.replace(/\s+/g, ' ').trim();
     const src: Array<string> = without_double_spaces.toLowerCase().split(" ");
     let count_equals: number = 0;
 
@@ -24,8 +24,8 @@ const SplitString = ( props: props_type ): JSX.Element =>
     {
         data.map((item) => { return ( 
             item.queries.map((string_item: string, navlink_index: number) => { 
+                string_item = string_item.replace(/[,]/g, "");
                 count_equals = 0;
-                
                 const split_string: Array<string> = string_item.toLowerCase().split(" ");
                 src.map((search_item: string) => { 
                     return ( 

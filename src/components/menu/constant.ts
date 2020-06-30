@@ -3,61 +3,63 @@ export const descript: string = "";
 export const href_component =
 [
     {
-        name: "Бізнес заходи",
-        name_href: "/business_events",
-        item_array: ["Податковий консалтинг", "Кадровий облік", "Бухгалтерський супровід", "Переоформление рабочих виз"],
+        name: "Бухгалтерські послуги",
+        name_href: "/accounting_events",
+        item_array: ["Податковий консалтинг", "Кадровий облік", "Бухгалтерський супровід", "Бухгалтерська звітність"],
         item_href: 
         [
-            "/business_events/tax_consulting",
-            "/business_events/personnel_accounting", 
-            "/business_events/accounting_support", 
-            "/business_events/enewal_of_work_visas"
+            "/accounting_events/tax_consulting",
+            "/accounting_events/personnel_accounting", 
+            "/accounting_events/accounting_support", 
+            "/accounting_events/accounting"
         ]
     },
     {
-        name: "Дополниетльные услуги",
-        name_href: "/additional_services",
-        item_array: ["Аутстаффинг", "Кадровые услуги", "Нотариальные переводы", "Медицинские услуги", "Бухалтерское и кадровое сопровождение"],
+        name: "Юридичні послуги",
+        name_href: "/legal_services",
+        item_array: ["Реєстрація юридичної особи", "Ліквідація юридичної особи", "Розробка договорів", "Посадові інструкії"],
         item_href: 
         [
-            "/additional_services/outstaffing", 
-            "/additional_services/personnel_services", 
-            "/additional_services/notarized_translations", 
-            "/additional_services/medical_services", 
-            "/additional_services/accounting_and_personnel_support"
+            "/legal_services/registration_of_a_legal_entity", 
+            "/legal_services/liquidation_of_a_legal_entity", 
+            "/legal_services/development_of_contracts", 
+            "/legal_services/job_descriptions"
         ]
     },
     {
-        name: "Меню 2",
-        name_href: "/menu_2",
-        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        name: "Паспортно-візові послуги",
+        name_href: "/passport_and_visa_services",
+        item_array: ["Оформлення посвідки на тимчасове проживання", "Оформлення посвідки на постійне проживання", 
+        "Реєстрація місця проживання", "Страхування на період перебування в Україні", "Запрошення (робочі, комерційні)"],
         item_href: 
         [
-            "/menu_2/outstaffing", 
-            "/menu_2/personnel_services", 
-            "/menu_2/accounting_and_personnel_support"
+            "/passport_and_visa_services/temporary_residence", 
+            "/passport_and_visa_services/permanent_residence", 
+            "/passport_and_visa_services/registration_of_residence",
+            "/passport_and_visa_services/insurance",
+            "/passport_and_visa_services/invitation",
         ]
     },
     {
-        name: "Меню 3",
-        name_href: "/menu_3",
-        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        name: "Event-management",
+        name_href: "/event-management",
+        item_array: ["Організація форумів, конференцій, семінарів", "Організація виставок та фестивалів", "Організація тренінгів, майстер-класів"],
         item_href: 
         [
-            "/menu_3/outstaffing", 
-            "/menu_3/personnel_services", 
-            "/menu_3/accounting_and_personnel_support"
+            "/event-management/forums", 
+            "/event-management/festivals", 
+            "/event-management/tranings"
         ]
     },
     {
-        name: "Меню 4",
-        name_href: "/menu_4",
-        item_array: ["подменю 1", "подменю 2", "подменю 3"],
+        name: "Ліцензування",
+        name_href: "/licensing",
+        item_array: ["Ліцензування освітньої діяльності", "Погодження і реєстрація зовнішньої реклами", "Набуття права інтелектуальної власності"],
         item_href: 
         [
-            "/menu_4/outstaffing", 
-            "/menu_4/personnel_services", 
-            "/menu_4/notary_translations"
+            "/licensing/educational_activity", 
+            "/licensing/outdoor_advertising", 
+            "/licensing/intellectual_property"
         ]
     },
     {
