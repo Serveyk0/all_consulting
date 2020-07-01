@@ -1,9 +1,11 @@
 import React from 'react';
-import { selection_array, select_object } from "./constant";
+//@ts-ignore
+import { selection_array, select_object } from "./constant.ts";
 import { connect } from 'react-redux';
 
 import "./selector.sass";
-import { Form } from './form/form';
+//@ts-ignore
+import { Form } from './form/form.tsx';
 
 const Selector = ( props: any ) =>  
 {

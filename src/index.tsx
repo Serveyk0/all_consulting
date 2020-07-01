@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App } from './App';
+//@ts-ignore
+import { App } from './App.tsx';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-import { GetSwitch } from './GetSwitch';
-import store from './store';
+//@ts-ignore
+import { GetSwitch } from './GetSwitch.tsx';
+//@ts-ignore
+import store from './store.tsx';
 
 
 ReactDOM.render(

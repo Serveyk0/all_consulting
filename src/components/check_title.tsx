@@ -1,8 +1,5 @@
 import React from "react";
 
-
-
-
 export const check_title = ( search: string, title : string ): JSX.Element => 
 {
     let original_str: Array<string> = title.toLowerCase().split(" ");

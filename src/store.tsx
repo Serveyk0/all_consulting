@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
 
-import reducer from './reducers';
+//@ts-ignore
+import reducer from './reducers/index.tsx';
 
 const store = createStore(reducer);
 

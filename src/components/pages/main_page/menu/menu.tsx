@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import "./menu.sass";
-import { href_component_array, href } from "./constant";
+//@ts-ignore
+import { href_component_array, href } from "./constant.ts";
 import { connect } from 'react-redux';
 
 type MenuProps = 

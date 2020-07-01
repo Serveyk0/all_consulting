@@ -3,7 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./search.sass";
 import { connect } from "react-redux";
-import { href_component } from "../menu/constant";
+//@ts-ignore
+import { href_component } from "../menu/constant.ts";
 
 type props_type = 
 {
@@ -39,7 +40,7 @@ const SplitString = ( props: props_type ): JSX.Element =>
                     //@ts-ignore 
                     <Link className="search_link" key={navlink_index} to={{pathname: item.href, propsSearch: without_double_spaces}} 
                     onClick={ () => {set_search(""); set_search_val("");
-                    Object.values(href_component).map((ul_item, ul_index) => { 
+                    Object.values(href_component).map((ul_item: any, ul_index) => { 
                         return ( ul_item.name_href === "/" + item.href.split("/")[1] ) ?
                         ul_item.name_href === "/" ? changePg(-1) : changePg(ul_index) : null
                     })

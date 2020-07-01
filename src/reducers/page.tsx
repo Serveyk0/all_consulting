@@ -1,4 +1,6 @@
-import { CHANGE_PAGE } from '../actionTypes';
+
+//@ts-ignore
+import { CHANGE_PAGE } from '../actionTypes/index.tsx';
 
 const initialPageState = {
     page: -1

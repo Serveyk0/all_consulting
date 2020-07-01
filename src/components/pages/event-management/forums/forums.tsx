@@ -2,8 +2,10 @@ import React from 'react';
 import "./forums.sass";
 import { show } from '../../../show';
 import "../../../common_styles.sass"
-import { check_title } from '../../../check_title';
-import { main_text, title } from "./constant";
+//@ts-ignore
+import { check_title } from '../../../check_title.tsx';
+//@ts-ignore
+import { main_text, title } from "./constant.ts";
 
 
 export const Forums: React.FC = ( props: any ): JSX.Element =>  

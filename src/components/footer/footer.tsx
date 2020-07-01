@@ -1,5 +1,6 @@
 import React from 'react';
-import { ooo, description } from "./constants";
+//@ts-ignore
+import { ooo, description } from "./constants.ts";
 import "./footer.sass";
 
 export const Footer: React.FC = ( ): JSX.Element=>  

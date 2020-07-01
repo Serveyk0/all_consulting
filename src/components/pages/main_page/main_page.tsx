@@ -1,8 +1,11 @@
 import React from 'react';
-import { MySlider } from "./slider/slider";
+//@ts-ignore
+import { MySlider } from "./slider/slider.tsx";
 import "./main_page.sass";
-import Selector from './selector/selector';
-import Menu from './menu/menu';
+//@ts-ignore
+import Selector from './selector/selector.tsx';
+//@ts-ignore
+import Menu from './menu/menu.tsx';
 import { show } from './../../show';
 
 export const MainPage = ( ): JSX.Element =>  

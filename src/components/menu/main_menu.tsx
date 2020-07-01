@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { href_component } from "./constant";
+
+
+//@ts-ignore
+import { href_component } from "./constant.ts";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { show } from '../show';
@@ -50,7 +53,7 @@ const MainMenu = ( props: any ): JSX.Element =>
     return (
         <div id="main_menu" className="main_menu hide_menu">
             {
-                Object.values(href_component).map((ul_item, ul_index) => { 
+                Object.values(href_component).map((ul_item: any, ul_index) => { 
                     let check_link = ul_index + 1 === Object.values(href_component).length ? true : false;
                     return ( 
                     <React.Fragment key={ul_index}>
@@ -67,7 +70,7 @@ const MainMenu = ( props: any ): JSX.Element =>
                             </div>
                             <ul id={ul_item.name} className={"main_menu_block" + (page === ul_index || check_link  ? " main_menu_block_active" : "")}>       
                                 {
-                                    Object.values(ul_item.item_array).map((li_item: string, li_index: number) => { return ( 
+                                    Object.values(ul_item.item_array).map((li_item: any, li_index: number) => { return ( 
                                         <li id={path} key={li_index} className="main_menu_block_item">
                                             {!check_link ? <NavLink to={ul_item.item_href[li_index]} className="main_menu_block_item_link">{li_item}</NavLink>
                                             : 

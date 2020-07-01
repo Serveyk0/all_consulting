@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../../media/main_page/mainLogo.jpg";
-import { phone_1, phone_2, address, work_day, search } from "./constant";
+//@ts-ignore
+import { phone_1, phone_2, address, work_day, search } from "./constant.ts";
 
 import "./header.sass";
 

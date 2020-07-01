@@ -1,0 +1,13 @@
+[debug] [2020-07-01T10:22:59.497Z] ----------------------------------------------------------------------
+[debug] [2020-07-01T10:22:59.502Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-07-01T10:22:59.502Z] CLI Version:   8.4.2
+[debug] [2020-07-01T10:22:59.502Z] Platform:      win32
+[debug] [2020-07-01T10:22:59.503Z] Node Version:  v12.18.0
+[debug] [2020-07-01T10:22:59.504Z] Time:          Wed Jul 01 2020 13:22:59 GMT+0300 (GMT+03:00)
+[debug] [2020-07-01T10:22:59.505Z] ----------------------------------------------------------------------
+[debug] [2020-07-01T10:22:59.505Z] 
+[debug] [2020-07-01T10:22:59.524Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-01T10:22:59.525Z] > authorizing via signed-in user
+[debug] [2020-07-01T10:22:59.525Z] [iam] checking project myportfolio-4823d for permissions ["firebase.projects.get"]
+[debug] [2020-07-01T10:22:59.545Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/myportfolio-4823d:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}

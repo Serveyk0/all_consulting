@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { send, reset, form_request_call } from './constant';
+//@ts-ignore
+import { send, reset, form_request_call } from './constant.ts';
 
 import "./form.sass";
 

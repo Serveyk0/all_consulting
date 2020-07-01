@@ -1,8 +1,10 @@
 import React from 'react';
 import "./temporary_residence.sass";
 import { show } from '../../../show';
-import { main_text, title } from "./constant";
-import { check_title } from '../../../check_title';
+//@ts-ignore
+import { main_text, title } from "./constant.ts";
+//@ts-ignore
+import { check_title } from '../../../check_title.tsx';
 import "../../../common_styles.sass";
 
 export const TemporaryResidence: React.FC = ( props: any ): JSX.Element =>  

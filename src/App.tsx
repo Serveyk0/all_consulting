@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Header } from "./components/header/header"
-import { Footer } from './components/footer/footer';
-import MainMenu from './components/menu/main_menu';
-import Search from './components/search/search';
+//@ts-ignore
+import { Header } from "./components/header/header.tsx"
+//@ts-ignore
+import { Footer } from './components/footer/footer.tsx';
+//@ts-ignore
+import MainMenu from './components/menu/main_menu.tsx';
+//@ts-ignore
+import Search from './components/search/search.tsx';
 
 export const App = ( props: any) => {
   const [searc, set_search] = useState("");

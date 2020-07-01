@@ -1,4 +1,6 @@
-import { CHANGE_SELECTOR } from '../actionTypes';
+
+//@ts-ignore
+import { CHANGE_SELECTOR } from '../actionTypes/index.tsx';
 
 const initialSelectorState = {
     cs: 0
