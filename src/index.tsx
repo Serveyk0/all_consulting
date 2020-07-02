@@ -4,21 +4,23 @@ import './index.css';
 //@ts-ignore
 import { App } from './App.tsx';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 //@ts-ignore
 import { GetSwitch } from './GetSwitch.tsx';
 //@ts-ignore
 import store from './store.tsx';
+import { createBrowserHistory } from "history";
 
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <HashRouter>
+      <Router history={history}>
         <App>
           <GetSwitch />
         </App>
-      </HashRouter>
+      </Router>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')

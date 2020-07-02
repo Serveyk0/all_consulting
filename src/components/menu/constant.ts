@@ -15,6 +15,28 @@ export const href_component =
         ]
     },
     {
+        name: "Event-management",
+        name_href: "/event-management",
+        item_array: ["Організація форумів, конференцій, семінарів", "Організація виставок та фестивалів", "Організація тренінгів, майстер-класів"],
+        item_href: 
+        [
+            "/event-management/forums", 
+            "/event-management/festivals", 
+            "/event-management/tranings"
+        ]
+    },
+    {
+        name: "Ліцензування",
+        name_href: "/licensing",
+        item_array: ["Ліцензування освітньої діяльності", "Погодження і реєстрація зовнішньої реклами", "Набуття права інтелектуальної власності"],
+        item_href: 
+        [
+            "/licensing/educational_activity", 
+            "/licensing/outdoor_advertising", 
+            "/licensing/intellectual_property"
+        ]
+    },
+    {
         name: "Юридичні послуги",
         name_href: "/legal_services",
         item_array: ["Реєстрація юридичної особи", "Ліквідація юридичної особи", "Розробка договорів", "Посадові інструкії"],
@@ -38,28 +60,6 @@ export const href_component =
             "/passport_and_visa_services/registration_of_residence",
             "/passport_and_visa_services/insurance",
             "/passport_and_visa_services/invitation",
-        ]
-    },
-    {
-        name: "Event-management",
-        name_href: "/event-management",
-        item_array: ["Організація форумів, конференцій, семінарів", "Організація виставок та фестивалів", "Організація тренінгів, майстер-класів"],
-        item_href: 
-        [
-            "/event-management/forums", 
-            "/event-management/festivals", 
-            "/event-management/tranings"
-        ]
-    },
-    {
-        name: "Ліцензування",
-        name_href: "/licensing",
-        item_array: ["Ліцензування освітньої діяльності", "Погодження і реєстрація зовнішньої реклами", "Набуття права інтелектуальної власності"],
-        item_href: 
-        [
-            "/licensing/educational_activity", 
-            "/licensing/outdoor_advertising", 
-            "/licensing/intellectual_property"
         ]
     },
     {

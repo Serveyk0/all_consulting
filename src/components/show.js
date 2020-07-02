@@ -9,7 +9,7 @@ export let show = function( )
 let show_method = function () 
 {
     let foo = document.getElementById("main_menu");
-    if(window.location.href.split("/")[4] !== "")
+    if(window.location.href.split("/")[3] !== "")
     {
         foo.classList.remove('hide_menu');
         foo.classList.add('show_menu');

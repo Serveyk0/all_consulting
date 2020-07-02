@@ -79,9 +79,5 @@ module.exports = {
     minimizer: [
         new OptimizeCSSAssetsPlugin({})
     ]
-},
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  }
+}
 };

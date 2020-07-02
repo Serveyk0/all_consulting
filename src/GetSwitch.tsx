@@ -55,34 +55,34 @@ export const GetSwitch = ( ) => {
 	return(
 		<Switch>
             <Route exact path='/'                                                                    component={MainPage} />
-            <Route exact path='/accounting_events'                                                   component={AccountingEvents} />
-            <Route path='/accounting_events/tax_consulting'                                          component={TaxConsulting} />
-            <Route path='/accounting_events/personnel_accounting'                                    component={PersonnelAccounting} />
-            <Route path='/accounting_events/accounting_support'                                      component={AccountingSupport} />
-            <Route path='/accounting_events/accounting'                                              component={Accounting} />
+            <Route path='/accounting_events'                                                   component={AccountingEvents} />
+            <Route path='/tax_consulting'                                          component={TaxConsulting} />
+            <Route path='/personnel_accounting'                                    component={PersonnelAccounting} />
+            <Route path='/accounting_support'                                      component={AccountingSupport} />
+            <Route path='/accounting'                                              component={Accounting} />
 
-            <Route exact path='/legal_services'                                                      component={LegalServices} />
-            <Route path='/legal_services/registration_of_a_legal_entity'                             component={RegistrationOfALegalEntity} />
-            <Route path='/legal_services/liquidation_of_a_legal_entity'                              component={LiquidationOfALegalEntity} />
-            <Route path='/legal_services/development_of_contracts'                                   component={DevelopmentOfContracts} />
-            <Route path='/legal_services/job_descriptions'                                           component={JobDescriptions} />
+            <Route path='/legal_services'                                                      component={LegalServices} />
+            <Route path='/registration_of_a_legal_entity'                             component={RegistrationOfALegalEntity} />
+            <Route path='/liquidation_of_a_legal_entity'                              component={LiquidationOfALegalEntity} />
+            <Route path='/development_of_contracts'                                   component={DevelopmentOfContracts} />
+            <Route path='/job_descriptions'                                           component={JobDescriptions} />
+
+            <Route path='/passport_and_visa_services'                                          component={PassportAndVisaServices} />
+            <Route path='/temporary_residence'                            component={TemporaryResidence} />
+            <Route path='/permanent_residence'                            component={PermanentResidence} />
+            <Route path='/registration_of_residence'                      component={RegistrationOfResidence} />
+            <Route path='/insurance'                                      component={Insurance} />
+            <Route path='/invitation'                                     component={Invitation} />
             
-            <Route exact path='/passport_and_visa_services'                                          component={PassportAndVisaServices} />
-            <Route path='/passport_and_visa_services/temporary_residence'                            component={TemporaryResidence} />
-            <Route path='/passport_and_visa_services/permanent_residence'                            component={PermanentResidence} />
-            <Route path='/passport_and_visa_services/registration_of_residence'                      component={RegistrationOfResidence} />
-            <Route path='/passport_and_visa_services/insurance'                                      component={Insurance} />
-            <Route path='/passport_and_visa_services/invitation'                                     component={Invitation} />
+            <Route path='/event-management'                                                    component={EventManagement} />
+            <Route path='/forums'                                                   component={Forums} />
+            <Route path='/festivals'                                                component={Festivals} />
+            <Route path='/tranings'                                                 component={Tranings} />
             
-            <Route exact path='/event-management'                                                    component={EventManagement} />
-            <Route path='/event-management/forums'                                                   component={Forums} />
-            <Route path='/event-management/festivals'                                                component={Festivals} />
-            <Route path='/event-management/tranings'                                                 component={Tranings} />
-            
-            <Route exact path='/licensing'                                                           component={Licensing} />
-            <Route path='/licensing/educational_activity'                                            component={EducationalActivity} />
-            <Route path='/licensing/outdoor_advertising'                                             component={OutdoorAdvertising} />
-            <Route path='/licensing/intellectual_property'                                           component={IntellectualProperty} />
+            <Route path='/licensing'                                                           component={Licensing} />
+            <Route path='/educational_activity'                                            component={EducationalActivity} />
+            <Route path='/outdoor_advertising'                                             component={OutdoorAdvertising} />
+            <Route path='/intellectual_property'                                           component={IntellectualProperty} />
         </Switch>
         )
     }

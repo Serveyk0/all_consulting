@@ -24,12 +24,12 @@ const Menu = ( props: MenuProps): JSX.Element =>
                             <React.Fragment key={ul_index}>
                                 { ul_index + 1 !== Object.values(href_item).length ? "" : <div></div> }
                                 <div>
-                                    <NavLink to={ul_item.name_href} className="menu_title" onClick={ () => { changePg( href_index * 2 + ul_index )}}>{ul_item.name}</NavLink>
+                                    <NavLink to={ul_item.name_href} className="menu_title" onClick={ () => { changePg( href_index * 3 + ul_index )}}>{ul_item.name}</NavLink>
                                     <ul className="menu_block">       
                                         {
-                                            Object.values(ul_item.item_array).map((li_item, li_index) => { return ( 
+                                            Object.values(ul_item.item_array).map((li_item: any, li_index) => { return ( 
                                                 <li key={li_index} className="menu_block_item">
-                                                    <NavLink to={ul_item.item_href[li_index]} className="menu_block_item_link" onClick={ () => changePg(href_index * 2 + ul_index)}>{li_item}</NavLink>
+                                                    <NavLink to={ul_item.item_href[li_index].split("/")[2]} className="menu_block_item_link" onClick={ () => changePg(href_index * 3 + ul_index)}>{li_item}</NavLink>
                                                 </li>
                                             )})
                                         }

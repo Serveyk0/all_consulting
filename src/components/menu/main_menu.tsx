@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 //@ts-ignore
 import { href_component } from "./constant.ts";
 import { NavLink, Link, withRouter } from "react-router-dom";
@@ -22,11 +21,11 @@ const MainMenu = ( props: any ): JSX.Element =>
     const changeSelect = ( li_index: number ) => 
         changeSel(li_index)
 
-    if ( path !== window.location.href.split('/')[4])
-        set_path(window.location.href.split('/')[4])
+    if ( path !== window.location.href.split('/')[3])
+        set_path(window.location.href.split('/')[3])
 
     useEffect(() => {
-        if ( window.location.href.split('/')[4] === "" )
+        if ( window.location.href.split('/')[3] === "" )
             app_class(false);
         else
             app_class(true);
@@ -72,7 +71,7 @@ const MainMenu = ( props: any ): JSX.Element =>
                                 {
                                     Object.values(ul_item.item_array).map((li_item: any, li_index: number) => { return ( 
                                         <li id={path} key={li_index} className="main_menu_block_item">
-                                            {!check_link ? <NavLink to={ul_item.item_href[li_index]} className="main_menu_block_item_link">{li_item}</NavLink>
+                                            {!check_link ? <NavLink to={ul_item.item_href[li_index].split("/")[2]} className="main_menu_block_item_link">{li_item}</NavLink>
                                             : 
                                             <Link to= { ul_item.item_href[li_index] } 
                                             className="main_menu_block_item_link" onClick={ () => changeSelect(li_index) }>{li_item}</Link>}

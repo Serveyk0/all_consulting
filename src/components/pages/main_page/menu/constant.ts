@@ -47,6 +47,18 @@ const href_component_1 : Array<href> =
 const href_component_2: Array<href> = 
 [
     {
+        name: "Юридичні послуги",
+        name_href: "/legal_services",
+        item_array: ["Реєстрація юридичної особи", "Ліквідація юридичної особи", "Розробка договорів", "Посадові інструкії"],
+        item_href: 
+        [
+            "/legal_services/registration_of_a_legal_entity", 
+            "/legal_services/liquidation_of_a_legal_entity", 
+            "/legal_services/development_of_contracts", 
+            "/legal_services/job_descriptions"
+        ]
+    },  
+    {
         name: "Паспортно-візові послуги",
         name_href: "/passport_and_visa_services",
         item_array: ["Оформлення посвідки на тимчасове проживання", "Оформлення посвідки на постійне проживання", 
@@ -60,19 +72,6 @@ const href_component_2: Array<href> =
             "/passport_and_visa_services/invitation",
         ]
     },
-    {
-        name: "Юридичні послуги",
-        name_href: "/legal_services",
-        item_array: ["Реєстрація юридичної особи", "Ліквідація юридичної особи", "Розробка договорів", "Посадові інструкії"],
-        item_href: 
-        [
-            "/legal_services/registration_of_a_legal_entity", 
-            "/legal_services/liquidation_of_a_legal_entity", 
-            "/legal_services/development_of_contracts", 
-            "/legal_services/job_descriptions"
-        ]
-    }
-    
 ]
 
 export const href_component_array: Array<Array<href>> = [href_component_1, href_component_2];
