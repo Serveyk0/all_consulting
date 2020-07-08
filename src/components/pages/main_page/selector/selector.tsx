@@ -1,5 +1,5 @@
 import React from 'react';
-import { selection_array, select_object } from "./constant";
+import { selection_array, select_object, title_span, other_span, about_us_p } from "./constant";
 import { connect } from 'react-redux';
 
 import "./selector.sass";
@@ -23,7 +23,15 @@ const Selector = ( props: any ) =>
             <div className="selector_description_items">
                 {
                     selection_array[cs].description === "" ? <Form /> :
-                    <span className="description active_description" >{selection_array[cs].description}</span>
+                    <>
+                        <div>
+                            <span className="description active_description color_description" >{title_span}</span>
+                            <span>{other_span}</span>
+                        </div>
+                        {about_us_p.map((p_item: string, p_index: number) => { return ( 
+                            <p key={p_index}>{p_item}</p>
+                        )})}
+                    </>
                 }   
             </div>
         </div>

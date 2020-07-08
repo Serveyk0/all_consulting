@@ -26,7 +26,7 @@ export const Header = ( props: any ): JSX.Element =>
                 <span className="header_contacts_address">{address}</span>
                 <span className="header_contacts_days">{work_day}</span>
                 <div className="search">
-                    <input type="text" className="search_text" value={search_val} onKeyPress={press_enter} onChange={change_value} placeholder="Поиск"/>
+                    <input type="text" className="search_text" value={search_val} onKeyPress={press_enter} onChange={change_value} placeholder={search} />
                     <button className="search_button" onKeyPress={press_enter} onClick={ () => set_search(search_val) }>{search}</button>
                 </div>
             </div>

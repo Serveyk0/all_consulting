@@ -22,10 +22,10 @@ export const IntellectualProperty: React.FC = ( props: any ): JSX.Element =>
                 {
                     return (    
                         Object.values(item.text).map((tag_item: any, tag_index: number ) => { return ( 
-                            item.tag === "span" ? <span key={tag_index} className="bold_text">{tag_item}</span> :
-                            item.tag === "" ? <span key={tag_index}>{tag_item}</span> :
-                            item.tag === "p" ? <p key={tag_index}>{tag_item}</p> :
-                            <li className="list_style" key={tag_index}>{tag_item}</li>
+                            item.tag === "span" ? <span key={tag_index} className={item.class}>{tag_item}</span> :
+                            item.tag === "" ? <span className={item.class} key={tag_index}>{tag_item}</span> :
+                            item.tag === "p" ? <p className={item.class} key={tag_index}>{tag_item}</p> :
+                            <li className={item.class} key={tag_index}>{tag_item}</li>
                     )}) 
                 )})
             }    

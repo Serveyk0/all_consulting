@@ -17,7 +17,7 @@
             padding: 10px 10px
             text-transform: uppercase
             font-weight: bold
-            font-size: 12px
+            font-size: 11px
             text-align: center
             font-family: Tahoma
             &:hover
@@ -25,9 +25,12 @@
                 cursor: default
                 background-color: #ffbbbb
     .selector_description_items
+        text-align: justify
         .description
-            display: none
-            @include fluidFontSize(12px, 14px, 750px, 1256px, 12px)
+            font-size: 15px
+        p, div
+            text-indent: 1.25cm
+            margin: 5px 0px 0px 0px
             
 
 .active_item
@@ -35,6 +38,9 @@
     background-color: #dc5858 !important
 
 .active_description
-    display: block !important
     text-align: justify
     
+.color_description
+    color: #dc5858
+    font-weight: bold
+    text-indent: 1.25cm

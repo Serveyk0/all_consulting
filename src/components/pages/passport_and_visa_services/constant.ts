@@ -1,4 +1,4 @@
-export const title: string = "Паспортно-візові послуги";
+export const title: string = "Міграційні послуги";
 export const main_text = 
 [
     {
