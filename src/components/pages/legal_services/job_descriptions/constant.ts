@@ -1,4 +1,4 @@
-export const title: string = "Посадові інструкії";
+export const title: string = "Посадові інструкції";
 export const main_text = 
 [
     {

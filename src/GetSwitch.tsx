@@ -44,7 +44,7 @@ export const GetSwitch = ( ) => {
             
             <Route exact path='/passport_and_visa_services'                                          component={PassportAndVisaServices} />
             <Route path='/passport_and_visa_services/temporary_residence'                            component={TemporaryResidence} />
-            <Route path='/passport_and_visa_services/permanent_residence'                            component={PermanentResidence} />
+            {/* <Route path='/passport_and_visa_services/permanent_residence'                            component={PermanentResidence} /> */}
             <Route path='/passport_and_visa_services/registration_of_residence'                      component={RegistrationOfResidence} />
             <Route path='/passport_and_visa_services/insurance'                                      component={Insurance} />
             <Route path='/passport_and_visa_services/invitation'                                     component={Invitation} />

@@ -1,11 +1,11 @@
-export const send: string = "Отправить сообщение";
-export const reset: string = "Очистить форму";
+export const send: string = "Відправити повідомлення";
+export const reset: string = "Очистити форму";
 
 export const form_request_call: Array<string> = 
 [
-    "Организация",
-    "Контактное лицо",
+    "Организація",
+    "Контактне обличчя",
     "Телефон",
-    "Удобное время",
-    "Тема звонка"
+    "Зручний час",
+    "Тема дзвінка"
 ]

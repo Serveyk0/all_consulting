@@ -39,7 +39,7 @@
         "href": "/accounting_events/accounting",
         "queries": 
         [
-            "Бухгалтерська аутсорсинг"
+            "Бухгалтерський аутсорсинг"
         ]
     },
     {
@@ -74,7 +74,7 @@
         "href": "/legal_services/job_descriptions",
         "queries": 
         [
-            "Посадові інструкії"
+            "Посадові інструкції"
         ]
     },
     {
@@ -89,14 +89,7 @@
         "href": "/passport_and_visa_services",
         "queries": 
         [
-            "Міграційні послуги"
-        ]
-    },
-    {
-        "href": "/passport_and_visa_services/temporary_residence",
-        "queries": 
-        [
-            "Оформлення посвідки на тимчасове проживання"
+            "Міграційні питання"
         ]
     },
     {
@@ -110,7 +103,7 @@
         "href": "/passport_and_visa_services/registration_of_residence",
         "queries": 
         [
-            "Реєстрація місця проживання"
+            "Додаткові послуги"
         ]
     },
     {

@@ -15,17 +15,17 @@ export interface slide
 const slide_1: slide = 
 {
     title_1:"БУХГАЛТЕРСЬКІ ПОСЛУГИ",
-    title_2:"Компетентная всесторонняя поддержка!",
+    title_2:"Досвід якісного обслуговування!",
     img:first,
-    img_alt:"Поддержка"
+    img_alt:"БУХГАЛТЕРСЬКІ ПОСЛУГИ"
 }
 
 const slide_2: slide = 
 {
     title_1:"EVENT-MANAGEMENT",
-    title_2:"Ваше доверие - лучшая поддержка!",
+    title_2:"Завдання. Бюджет. Результат.",
     img:second,
-    img_alt:"Паспортно-визовые услуги"
+    img_alt:"EVENT-MANAGEMENT"
 }
 
 const slide_3: slide = 
@@ -33,23 +33,23 @@ const slide_3: slide =
     title_1:"ЛІЦЕНЗУВАННЯ",
     title_2:"Ваша экономия 34%!",
     img:third,
-    img_alt:"Аутстаффинг"
+    img_alt:"ЛІЦЕНЗУВАННЯ"
 }
 
 const slide_4: slide = 
 {
-    title_1:"ПАСПОРТНО-ВІЗОВІ ПОСЛУГИ",
-    title_2:"Легально! Быстро! Удобно!",
+    title_1:"МІГРАЦІЙНІ ПИТАННЯ",
+    title_2:"Практичне рішення міграційних питань.",
     img:fourth,
-    img_alt:"Разрешение на работу"
+    img_alt:"МІЖНАРОДНІ ПОСЛУГИ"
 }
 
 const slide_5: slide = 
 {
     title_1:"ЮРИДИЧНІ ПОСЛУГИ",
-    title_2:"Легально! Быстро! Удобно!",
+    title_2:"Професійно. Доступно. Конфіденційно",
     img:fifth,
-    img_alt:"Разрешение на работу"
+    img_alt:"ЮРИДИЧНІ ПОСЛУГИ"
 }
 
 export const slides_array: Array<slide> =

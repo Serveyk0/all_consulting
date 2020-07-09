@@ -1,4 +1,4 @@
-export const title: string = "Міграційні послуги";
+export const title: string = "Міграційні питання";
 export const main_text = 
 [
     {

@@ -8,8 +8,8 @@ const nodemailer = require('nodemailer');
 const mailTransport = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "maximum.lenovo.ml@gmail.com",
-    pass: "_STalker19",
+    user: "All.Consulting.Ukraine@gmail.com",
+    pass: "All.Consulting.Ukraine.2020",
   },
 });
 
@@ -38,8 +38,8 @@ exports.sendMailCall = functions.https.onRequest((req: any, res: any) => {
     `
   ;
   const mailOptions = {
-    from: `maximum.lenovo.ml@gmail.com`,
-    to: `maximum.lenovo.ml@gmail.com`,
+    from: `All.Consulting.Ukraine@gmail.com`,
+    to: `All.Consulting.Ukraine@gmail.com`,
     subject: data.name === "call" ? `Заказать звонок` : `Консультация`,
     html: template,
   };

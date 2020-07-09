@@ -1,4 +1,4 @@
-export const title: string = "Бухгалтерська аутсорсинг";
+export const title: string = "Бухгалтерський аутсорсинг";
 export const main_text = 
 [
     {

@@ -5,39 +5,13 @@ export const href_component =
     {
         name: "Бухгалтерські послуги",
         name_href: "/accounting_events",
-        item_array: ["Податковий консалтинг", "Кадровий облік", "Бухгалтерський супровід", "Бухгалтерська аутсорсинг"],
+        item_array: ["Бухгалтерський аутсорсинг", "Бухгалтерський супровід", "Податковий консалтинг", "Кадровий облік", ],
         item_href: 
         [
+            "/accounting_events/accounting",
+            "/accounting_events/accounting_support", 
             "/accounting_events/tax_consulting",
             "/accounting_events/personnel_accounting", 
-            "/accounting_events/accounting_support", 
-            "/accounting_events/accounting"
-        ]
-    },
-    {
-        name: "Юридичні послуги",
-        name_href: "/legal_services",
-        item_array: ["Реєстрація юридичної особи", "Ліквідація юридичної особи", "Розробка договорів", "Посадові інструкії"],
-        item_href: 
-        [
-            "/legal_services/registration_of_a_legal_entity", 
-            "/legal_services/liquidation_of_a_legal_entity", 
-            "/legal_services/development_of_contracts", 
-            "/legal_services/job_descriptions"
-        ]
-    },
-    {
-        name: "Міграційні послуги",
-        name_href: "/passport_and_visa_services",
-        item_array: ["Оформлення посвідки на тимчасове проживання", "Оформлення посвідки на постійне проживання", 
-        "Реєстрація місця проживання", "Страхування на період перебування в Україні", "Запрошення (робочі, комерційні)"],
-        item_href: 
-        [
-            "/passport_and_visa_services/temporary_residence", 
-            "/passport_and_visa_services/permanent_residence", 
-            "/passport_and_visa_services/registration_of_residence",
-            "/passport_and_visa_services/insurance",
-            "/passport_and_visa_services/invitation",
         ]
     },
     {
@@ -60,6 +34,34 @@ export const href_component =
             "/licensing/educational_activity", 
             "/licensing/outdoor_advertising", 
             "/licensing/intellectual_property"
+        ]
+    },
+    {
+        name: "Міграційні питання",
+        name_href: "/passport_and_visa_services",
+        item_array: [
+            "Оформлення посвідки на тимчасове проживання", 
+            // "Оформлення посвідки на постійне проживання", 
+        "Додаткові послуги", "Страхування на період перебування в Україні", "Запрошення (робочі, комерційні)"],
+        item_href: 
+        [
+            "/passport_and_visa_services/temporary_residence", 
+            // "/passport_and_visa_services/permanent_residence", 
+            "/passport_and_visa_services/registration_of_residence",
+            "/passport_and_visa_services/insurance",
+            "/passport_and_visa_services/invitation",
+        ]
+    },
+    {
+        name: "Юридичні послуги",
+        name_href: "/legal_services",
+        item_array: ["Реєстрація юридичної особи", "Ліквідація юридичної особи", "Розробка договорів", "Посадові інструкції"],
+        item_href: 
+        [
+            "/legal_services/registration_of_a_legal_entity", 
+            "/legal_services/liquidation_of_a_legal_entity", 
+            "/legal_services/development_of_contracts", 
+            "/legal_services/job_descriptions"
         ]
     },
     {
