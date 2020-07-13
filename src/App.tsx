@@ -12,7 +12,7 @@ export const App = ( props: any) => {
     return (
       <div className="App">
         <Header set_search={set_search} search_val={search_val} set_search_val={set_search_val}/>
-        <div className={(app_class ? "app_content" : "") + (searc !== "" ? " hide_block" : "")}>
+        <div className={( "app_padding" + (app_class ? "app_content" : "")) + (searc !== "" ? " hide_block" : "")}>
           <MainMenu app_class={set_app_class}/>
           { props.children }
         </div>

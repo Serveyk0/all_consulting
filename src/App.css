@@ -19,3 +19,7 @@
     border-top: 1px solid #dcdcdc;
     grid-column-gap: 20px;
 }
+
+.app_padding {
+    padding-top: 20px;
+}
